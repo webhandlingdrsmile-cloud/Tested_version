@@ -1,17 +1,8 @@
 @import "tailwindcss";
 
 @font-face {
-  font-family: 'Reddit Sans';
+  font-family: 'Reddit';
   src: url('/Fonts/RedditSans-SemiBold.ttf') format('truetype');
-  font-weight: 600;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Reddit Sans';
-  src: url('/Fonts/RedditSans-Bold.ttf') format('truetype');
-  font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
@@ -23,17 +14,10 @@
   font-display: swap;
 }
 
-@font-face {
-  font-family: 'Poppins';
-  src: url('/Fonts/Poppins-Medium.ttf') format('truetype');
-  font-style: normal;
-  font-display: swap;
-}
-
-body {
-  font-family: 'Reddit Sans', sans-serif;
-}
 body {
   font-family: 'Poppins', sans-serif;
 }
 
+.reddit-font {
+  font-family: 'Reddit', sans-serif;
+}

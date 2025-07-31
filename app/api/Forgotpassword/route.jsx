@@ -3,12 +3,11 @@ import { dbConnect } from '../../../Lib/connection';
 import User from '../../../Modeles/Usermodel';
 import nodemailer from 'nodemailer';
 
-// Create a reusable transporter
 const transporter = nodemailer.createTransport({
   service: 'gmail',
   auth: {
-    user: process.env.EMAIL_USER,      // your email
-    pass: process.env.EMAIL_PASS,      // app password or email password
+    user: process.env.EMAIL_USER,     
+    pass: process.env.EMAIL_PASS,      
   },
 });
 
@@ -22,14 +21,13 @@ export async function POST(req) {
       return NextResponse.json({ message: 'User not found' }, { status: 404 });
     }
 
-    const otp = Math.floor(100000 + Math.random() * 900000); // 6-digit
-    const expiry = new Date(Date.now() + 10 * 60 * 1000); // 10 min
+    const otp = Math.floor(100000 + Math.random() * 900000); 
+    const expiry = new Date(Date.now() + 10 * 60 * 1000); 
 
     user.resetOTP = otp;
     user.resetOTPExpiry = expiry;
     await user.save();
 
-    // Send email with OTP
     const mailOptions = {
       from: process.env.EMAIL_USER,
       to: email,
@@ -39,7 +37,7 @@ export async function POST(req) {
         <p>Your OTP for password reset is: <strong>${otp}</strong></p>
         <p>This OTP is valid for 10 minutes.</p>
         <br/>
-        <p>Regards,<br/>Flipmaxx Team</p>
+        <p>Regards,<br/>Dr.Smile</p>
       `,
     };
 

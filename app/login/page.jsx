@@ -4,6 +4,7 @@ import { useState } from 'react'
 import axios from 'axios'
 import { useRouter } from 'next/navigation'
 import { Mail, KeyRound, Eye } from 'lucide-react'
+import Link from 'next/link'
 
 export default function Login() {
   const router = useRouter()
@@ -38,7 +39,7 @@ export default function Login() {
     <div className="min-h-screen grid grid-cols-1 xl:grid-cols-2">
       
       <div className="bg-[#083c44] text-white flex flex-col items-center justify-center p-10">
-        <h1 className="text-3xl font-bold mb-6">Dr.Smile</h1>
+        <h1 className="text-3xl font-bold mb-6 font-poppins">Dr.Smile</h1>
         <img
           src="/Images/loginp1.png"
           alt="Dental"
@@ -56,10 +57,10 @@ export default function Login() {
 
       <div className="bg-white flex flex-col justify-center px-8 py-12 lg:px-24">
         <div className="max-w-md w-full mx-auto">
-          <h2 className="text-2xl font-bold mb-2 text-gray-800 text-center">
+          <h2 className="text-2xl xl:text-4xl font-bold mb-2 text-gray-800 text-center font-poppins">
             log In
           </h2>
-          <p className="text-sm text-gray-600 mb-6 text-center">
+          <p className="text-sm text-gray-600 mb-6 text-center font-reddit">
             Please Enter Your Details To Sign In Your Account
           </p>
 
@@ -129,14 +130,14 @@ export default function Login() {
             </button>
           </form>
 
-          <div className="text-center mt-6">
-            <a
-              href="#"
-              className="text-sm text-[#083c44] hover:underline font-medium"
-            >
-              Forgot You Password
-            </a>
-          </div>
+    <Link href="/Forgotpassword">
+  <div className="text-center mt-6">
+    <span className="text-sm text-[#083c44] hover:underline font-medium cursor-pointer">
+      Forgot Your Password?
+    </span>
+  </div>
+</Link>
+
 
           <div className="mt-10 text-center text-sm xl:text-sm text-gray-500">
             <p>© 2025 Dr.smile</p>
