@@ -26,7 +26,7 @@ const navItems = [
   { label: 'Levels', icon: FaTachometerAlt, href: '/dashboard/levels' },
   { label: 'Enquiry', icon: FaPhoneAlt, href: '/dashboard/enquiry' },
   { label: 'Bookings', icon: FaCalendarAlt, href: '/dashboard/bookings' },
-  { label: 'Doctors', icon: FaUserMd, href: '/dashboard/doctors' },
+  { label: 'Doctors', icon: FaUserMd, href: '/Dashboard/Doctors' },
   { label: 'Services', icon: FaTooth, href: '/dashboard/services' },
   { label: 'Blogs', icon: FaNewspaper, href: '/dashboard/blogs' },
   { label: 'Create Account', icon: MdSupervisorAccount, href: '/Dashboard/Signup' },
