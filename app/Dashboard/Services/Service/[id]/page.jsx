@@ -12,10 +12,8 @@ export default function ViewServicePage() {
   useEffect(() => {
     const checkAndFetch = async () => {
       try {
-        
         await axios.get('/api/Login');
 
-        
         const res = await axios.get(`/api/Services/EditService/${id}`);
         setService(res.data);
       } catch (err) {
@@ -39,7 +37,7 @@ export default function ViewServicePage() {
   }
 
   return (
-    <div className="min-h-screen bg-[#f8f9fa] p-6 flex flex-col items-center">
+    <div className="min-h-screen flex justify-center items-center bg-[#f8f9fa] p-4">
       <div className="w-full max-w-md bg-white rounded-xl shadow-md p-6">
         <img
           src={service.Image}
@@ -51,7 +49,7 @@ export default function ViewServicePage() {
 
         <div className="flex justify-between">
           <button
-            onClick={() => router.push(`/dashboard/Services/Edit/${service._id}`)}
+            onClick={() => router.push(`/Dashboard/Services/EditService/${service._id}`)}
             className="bg-[#004d40] text-white px-4 py-2 rounded hover:bg-[#00695c]"
           >
             Edit

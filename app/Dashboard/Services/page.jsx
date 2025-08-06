@@ -42,7 +42,7 @@ export default function ServiceListPage() {
       <div className="flex justify-between items-center mb-8">
         <h1 className="text-xl font-medium text-[#333]">Dashboard</h1>
         <button
-          onClick={() => router.push('/dashboard/Services/Add')}
+          onClick={() => router.push('/Dashboard/Services/AddService')}
           className="bg-[#004d40] text-white px-4 py-2 rounded-md hover:bg-[#00695c] transition"
         >
           Add Service →
@@ -59,10 +59,13 @@ export default function ServiceListPage() {
             <img
               src={service.Image}
               alt={service.Service}
-              className="w-full h-36 object-cover rounded-lg mb-4"
+              className="w-full h-60 object-cover rounded-lg mb-4"
             />
             <h3 className="text-lg font-semibold text-start text-gray-800">
               {service.Service}
+            </h3>
+            <h3 className="text-xs font-semibold text-start text-gray-800">
+              {service.Description}
             </h3>
           </div>
         ))}
