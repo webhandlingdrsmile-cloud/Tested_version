@@ -27,7 +27,7 @@ const navItems = [
   { label: 'Enquiry', icon: FaPhoneAlt, href: '/dashboard/enquiry' },
   { label: 'Bookings', icon: FaCalendarAlt, href: '/dashboard/bookings' },
   { label: 'Doctors', icon: FaUserMd, href: '/Dashboard/Doctors' },
-  { label: 'Services', icon: FaTooth, href: '/dashboard/services' },
+  { label: 'Services', icon: FaTooth, href: '/Dashboard/Services' },
   { label: 'Blogs', icon: FaNewspaper, href: '/dashboard/blogs' },
   { label: 'Create Account', icon: MdSupervisorAccount, href: '/Dashboard/Signup' },
 ];
