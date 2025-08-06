@@ -35,18 +35,22 @@ export default function DoctorListPage() {
     fetchDoctors();
   }, []);
 
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, [currentPage]);
+
   const totalPages = Math.ceil(doctors.length / perPage);
   const startIdx = (currentPage - 1) * perPage;
   const paginatedDoctors = doctors.slice(startIdx, startIdx + perPage);
 
   return (
-    <div className="min-h-screen bg-white p-6">
+    <div className="min-h-screen bg-white p-6 ">
       <div className="flex justify-between items-center mb-6">
         <button
           onClick={() => router.back()}
-          className="text-[#00394f] font-semibold border border-[#00394f] px-4 py-2 rounded-md hover:bg-[#00394f] hover:text-white transition"
+          className="text-[#00394f] font-semibold px-4 py-2 rounded-md  transition"
         >
-          ← Back
+          ← Back to Dashboard
         </button>
         <Link href="/Dashboard/Doctors/AddDoctor">
           <button className="bg-[#00394f] hover:bg-[#002837] text-white px-4 py-2 rounded-md flex items-center gap-2">
@@ -54,24 +58,23 @@ export default function DoctorListPage() {
           </button>
         </Link>
       </div>
-     <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
-  {paginatedDoctors.map((doctor) => (
-    <Link
-      key={doctor._id}
-      href={`/Dashboard/Doctors/Doctor/${doctor._id}`}
-      className="bg-white rounded-xl shadow-md p-4 flex flex-col items-center text-center cursor-pointer hover:shadow-lg transition"
-    >
-      <img
-        src={doctor.Image}
-        alt={doctor.Name}
-        className="w-full h-48 object-cover rounded-md mb-4"
-      />
-      <p className="font-semibold">{doctor.Name}</p>
-      <p className="text-sm text-gray-500">{doctor.Designation}</p>
-    </Link>
-  ))}
-</div>
-
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6 container mx-auto">
+        {paginatedDoctors.map((doctor) => (
+          <Link
+            key={doctor._id}
+            href={`/Dashboard/Doctors/Doctor/${doctor._id}`}
+            className="bg-white rounded-xl shadow-md p-4 flex flex-col items-start text-start cursor-pointer hover:shadow-lg transition w-[280px] mx-auto"
+          >
+            <img
+              src={doctor.Image}
+              alt={doctor.Name}
+              className="w-[280px] h-[280px] object-cover rounded-md mb-4"
+            />
+            <p className="font-semibold">{doctor.Name}</p>
+            <p className="text-sm text-gray-500">{doctor.Designation}</p>
+          </Link>
+        ))}
+      </div>
       <div className="flex justify-center mt-8 space-x-2">
         <button
           onClick={() => setCurrentPage((prev) => Math.max(1, prev - 1))}
@@ -80,6 +83,7 @@ export default function DoctorListPage() {
         >
           &lt;
         </button>
+
         {Array.from({ length: totalPages }).map((_, idx) => (
           <button
             key={idx}
@@ -91,6 +95,7 @@ export default function DoctorListPage() {
             {idx + 1}
           </button>
         ))}
+
         <button
           onClick={() => setCurrentPage((prev) => Math.min(totalPages, prev + 1))}
           className="px-3 py-1 border rounded disabled:opacity-50"

@@ -40,32 +40,39 @@ export default function DoctorDetailsPage() {
 
   if (!doctor) return <p className="text-center mt-10">Loading doctor details...</p>;
 
-  return (
-    <div className="min-h-screen bg-[#f9f9f9] flex items-center justify-center px-4">
-      <div className="bg-white rounded-xl shadow-lg p-6 max-w-sm w-full text-center">
-        <img
-          src={doctor.Image}
-          alt={doctor.Name}
-          className="w-full h-56 object-cover rounded-md"
-        />
-        <h2 className="mt-4 text-xl font-semibold text-gray-800">{doctor.Name}</h2>
-        <p className="text-gray-500 text-sm mb-4">{doctor.Designation}</p>
+return (
+  <div className="min-h-screen bg-[#f9f9f9] flex items-center justify-center px-4 relative">
+    <button
+      onClick={() => router.back()}
+      className="absolute top-6 left-6 text-[#00394f] font-semibold px-4 py-2  transition"
+    >
+      ← Back
+    </button>
+    <div className="bg-white rounded-xl shadow-lg p-6 max-w-xl w-auto text-start">
+      <img
+        src={doctor.Image}
+        alt={doctor.Name}
+        className="w-auto h-96 bg-cover rounded-md"
+      />
+      <h2 className="mt-4 text-xl font-semibold text-gray-800">{doctor.Name}</h2>
+      <p className="text-gray-500 text-sm mb-4">{doctor.Designation}</p>
 
-        <div className="flex justify-center gap-4 mt-4">
-          <button
-            onClick={handleEdit}
-            className="bg-[#0f3d3e] text-white px-5 py-2 rounded-md hover:opacity-90"
-          >
-            Edit
-          </button>
-          <button
-            onClick={handleDelete}
-            className="border border-red-500 text-red-500 px-5 py-2 rounded-md hover:bg-red-100"
-          >
-            Delete
-          </button>
-        </div>
+      <div className="flex justify-start gap-4 mt-4">
+        <button
+          onClick={handleEdit}
+          className="bg-[#0f3d3e] text-white px-5 py-2 rounded-md hover:opacity-90"
+        >
+          Edit
+        </button>
+        <button
+          onClick={handleDelete}
+          className="border border-red-500 text-red-500 px-5 py-2 rounded-md hover:bg-red-100"
+        >
+          Delete
+        </button>
       </div>
     </div>
-  );
+  </div>
+);
+
 }
