@@ -1,14 +1,13 @@
 'use client';
 
 import { useState } from 'react';
-import { useSearchParams, useRouter } from 'next/navigation';
+import { useParams, useRouter } from 'next/navigation';
 import axios from 'axios';
 import { ArrowRight, Eye, EyeOff, KeyRound, MailCheck } from 'lucide-react';
 
 export default function ResetPasswordPage() {
   const router = useRouter();
-  const searchParams = useSearchParams();
-  const email = searchParams.get('email') || '';
+  const { email } = useParams(); 
 
   const [otp, setOtp] = useState('');
   const [newPassword, setNewPassword] = useState('');
@@ -20,7 +19,6 @@ export default function ResetPasswordPage() {
 
   const handleResetPassword = async (e) => {
     e.preventDefault();
-    setLoading(true);
     setError('');
     setMessage('');
 

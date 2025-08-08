@@ -5,6 +5,7 @@ import axios from 'axios';
 import { useRouter } from 'next/navigation';
 import { Mail } from 'lucide-react';
 
+
 export default function ForgotPasswordPage() {
   const [email, setEmail] = useState('');
   const [loading, setLoading] = useState(false);
@@ -19,7 +20,7 @@ export default function ForgotPasswordPage() {
     try {
       const response = await axios.post('/api/Forgotpassword', { email });
       if (response.data.message) {
-        router.push(`/ResetPassword?email=${encodeURIComponent(email)}`);
+        router.push(`/ResetPassword/${email}`);
       }
     } catch (err) {
       setError(err.response?.data?.message || 'Something went wrong');
