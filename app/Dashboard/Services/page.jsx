@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
+import Link from 'next/link';
 import axios from 'axios';
 
 export default function ServiceListPage() {
@@ -40,7 +41,9 @@ export default function ServiceListPage() {
   return (
     <div className="p-6 min-h-screen bg-[#f8f9fa]">
       <div className="flex justify-between items-center mb-8">
+       <Link href={`/Dashboard`}>
         <h1 className="text-xl font-medium text-[#333]">Dashboard</h1>
+       </Link>
         <button
           onClick={() => router.push('/Dashboard/Services/AddService')}
           className="bg-[#004d40] text-white px-4 py-2 rounded-md hover:bg-[#00695c] transition"
@@ -49,7 +52,7 @@ export default function ServiceListPage() {
         </button>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-5 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
         {currentServices.map((service, idx) => (
           <div
             key={idx}

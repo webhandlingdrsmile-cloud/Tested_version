@@ -3,11 +3,14 @@
 import { useEffect, useState } from 'react';
 import { useParams, useRouter } from 'next/navigation';
 import axios from 'axios';
+import Link from 'next/link';
 
 export default function ViewServicePage() {
   const { id } = useParams();
   const router = useRouter();
+
   const [service, setService] = useState(null);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const checkAndFetch = async () => {
@@ -20,15 +23,28 @@ export default function ViewServicePage() {
         if (err.response?.status === 401) {
           router.push('/login');
         } else {
-          console.error('Error:', err);
+          console.error('Failed to fetch service:', err);
         }
+      } finally {
+        setLoading(false);
       }
     };
 
-    checkAndFetch();
+    if (id) {
+      checkAndFetch();
+    }
   }, [id, router]);
 
-  if (!service) {
+  const handleDelete = async () => {
+    try {
+      await axios.delete(`/api/Services/EditService/${service._id}`);
+      router.push('/Dashboard/Services');
+    } catch (error) {
+      console.error('Failed to delete service:', error);
+    }
+  };
+
+  if (loading) {
     return (
       <div className="flex justify-center items-center min-h-screen text-gray-500">
         Loading...
@@ -36,12 +52,23 @@ export default function ViewServicePage() {
     );
   }
 
+  if (!service) {
+    return (
+      <div className="flex justify-center items-center min-h-screen text-red-500">
+        Failed to load service.
+      </div>
+    );
+  }
+
   return (
-    <div className="min-h-screen flex justify-center items-center bg-[#f8f9fa] p-4">
+    <div className="min-h-screen flex justify-center relative items-center bg-[#f8f9fa] p-4">
+      <Link href={`/Dashboard/Services`} className='absolute left-3 top-5'>
+       <h1 className="text-lg font-medium text-[#333]">Services</h1>
+      </Link>
       <div className="w-full max-w-md bg-white rounded-xl shadow-md p-6">
         <img
           src={service.Image}
-          alt={service.Service}
+          alt={service.Service || 'Service Image'}
           className="w-full h-56 object-cover rounded-md mb-6"
         />
         <h2 className="text-xl font-bold text-gray-800 mb-2">{service.Service}</h2>
@@ -55,14 +82,7 @@ export default function ViewServicePage() {
             Edit
           </button>
           <button
-            onClick={async () => {
-              try {
-                await axios.delete(`/api/Services/AddServices/${service._id}`);
-                router.push('/dashboard/Services');
-              } catch (error) {
-                console.error('Failed to delete', error);
-              }
-            }}
+            onClick={handleDelete}
             className="border border-red-500 text-red-500 px-4 py-2 rounded hover:bg-red-100"
           >
             Delete

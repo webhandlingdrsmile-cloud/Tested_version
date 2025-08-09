@@ -50,7 +50,7 @@ export default function AddDoctorPage() {
     try {
       await axios.post('/api/Doctors/Adddoctors', doctor);
       alert('Doctor Created Successfully');
-      router.push('/Dashboard');
+      router.push('/Dashboard/Doctors');
     } catch (error) {
       console.error(error);
       alert('Something went wrong');

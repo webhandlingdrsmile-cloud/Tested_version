@@ -1,8 +1,8 @@
 'use client';
-
 import { useEffect, useState } from 'react';
 import { useParams, useRouter } from 'next/navigation';
 import axios from 'axios';
+import Link from 'next/link';
 
 export default function DoctorDetailsPage() {
   const { id } = useParams();
@@ -42,12 +42,14 @@ export default function DoctorDetailsPage() {
 
 return (
   <div className="min-h-screen bg-[#f9f9f9] flex items-center justify-center px-4 relative">
+    <Link href={`/Dashboard/Doctors`}>
     <button
-      onClick={() => router.back()}
+      
       className="absolute top-6 left-6 text-[#00394f] font-semibold px-4 py-2  transition"
     >
       ← Back
     </button>
+    </Link>
     <div className="bg-white rounded-xl shadow-lg p-6 max-w-xl w-auto text-start">
       <img
         src={doctor.Image}

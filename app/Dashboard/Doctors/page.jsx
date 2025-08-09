@@ -46,14 +46,16 @@ export default function DoctorListPage() {
   return (
     <div className="min-h-screen bg-white p-6 ">
       <div className="flex justify-between items-center mb-6">
+      <Link href={`/Dashboard`}>
         <button
-          onClick={() => router.back()}
-          className="text-[#00394f] font-semibold px-4 py-2 rounded-md  transition"
+         
+          className="text-[#00394f] text-xs md:text-xl font-semibold md:px-4 py-2 rounded-md  transition"
         >
           ← Back to Dashboard
         </button>
+      </Link>
         <Link href="/Dashboard/Doctors/AddDoctor">
-          <button className="bg-[#00394f] hover:bg-[#002837] text-white px-4 py-2 rounded-md flex items-center gap-2">
+          <button className="bg-[#00394f] hover:bg-[#002837] text-xs md:text-md text-white px-4 py-2 rounded-md flex items-center gap-2">
             Add Doctor →
           </button>
         </Link>
