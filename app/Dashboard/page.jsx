@@ -23,12 +23,12 @@ import {
 import { MdSupervisorAccount } from "react-icons/md";
 
 const navItems = [
-  { label: 'Levels', icon: FaTachometerAlt, href: '/dashboard/levels' },
+  { label: 'Dashboard', icon: FaTachometerAlt, href: '/Dashboard' },
   { label: 'Enquiry', icon: FaPhoneAlt, href: '/Dashboard/Contact' },
   { label: 'Bookings', icon: FaCalendarAlt, href: '/Dashboard/Bookings' },
   { label: 'Doctors', icon: FaUserMd, href: '/Dashboard/Doctors' },
   { label: 'Services', icon: FaTooth, href: '/Dashboard/Services' },
-  { label: 'Blogs', icon: FaNewspaper, href: '/dashboard/blogs' },
+  { label: 'Blogs', icon: FaNewspaper, href: '/Dashboard/Blogs' },
   { label: 'Create Account', icon: MdSupervisorAccount, href: '/Dashboard/Signup' },
 ];
 

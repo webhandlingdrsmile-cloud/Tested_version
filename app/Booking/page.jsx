@@ -66,42 +66,51 @@ export default function QuickAppointment() {
 
   return (
     <div className="grid grid-cols-1 lg:grid-cols-2 min-h-screen mx-auto overflow-x-hidden">
-      <div className="bg-[#0d3b36] text-white p-6 sm:p-12 flex flex-col justify-between relative">
-        <div>
-          <Link href={`/`}>
-            <button className="text-white text-xl mb-6">←</button>
-          </Link>
-          <h1 className="text-2xl sm:text-3xl font-bold mb-4">Dr.Smile</h1>
-          <h2 className="text-xl sm:text-2xl font-semibold mb-4">
-            Easy Appointment Booking <br /> Dr. Smile Dental Care.
-          </h2>
-          <p className="text-gray-300 mb-8 text-sm sm:text-base">
-            Easily Schedule Your Dental Appointments With Dr. Smile Dental Care.
-            Our Seamless Booking Process Ensures Quick Access To Expert Care,
-            Helping You Achieve A Healthier, Brighter Smile Without Any Hassle.
-          </p>
-        </div>
+  <div
+  className="relative bg-[#0d3b36] text-white p-6 sm:p-12 flex flex-col justify-between"
+  style={{
+    backgroundImage: "url('/Images/Booking.png')",
+    backgroundSize: "cover",
+    backgroundPosition: "center"
+  }}
+>
+  <div className="absolute inset-0 bg-[#0d3b36]/80"></div>
+  <div className="relative space-y-8">
+    <Link href={`/`}>
+      <button className="text-white text-xl mb-6">←</button>
+    </Link>
+    <h1 className="text-2xl sm:text-3xl font-bold mb-4">Dr.Smile</h1>
+    <h2 className="text-xl sm:text-2xl font-semibold mb-4">
+      Easy Appointment Booking <br /> Dr. Smile Dental Care.
+    </h2>
+    <p className="text-gray-300 mb-8 text-sm sm:text-sm">
+      Easily Schedule Your Dental Appointments With Dr. Smile Dental Care.
+      Our Seamless Booking Process Ensures Quick Access To Expert Care,
+      Helping You Achieve A Healthier, Brighter Smile Without Any Hassle.
+    </p>
+  </div>
 
-        <div className="bg-white/20 backdrop-blur-md p-6 rounded-2xl shadow-lg border border-white/30">
-          <p className="text-gray-200 mb-4 text-sm sm:text-base">
-            A Dental Doctor Restores More Than Just Smiles — They Rebuild
-            Confidence, Relieve Pain, And Promote Lasting Oral Health With
-            Precision, Care, And Compassion, One Patient And One Tooth At A
-            Time.
-          </p>
-          <div className="flex items-center gap-3">
-            <img
-              src="/dentist.jpg"
-              alt="Ramisa Sajana"
-              className="w-10 h-10 rounded-full border-2 border-white"
-            />
-            <div>
-              <p className="font-semibold text-sm sm:text-base">Ramisa Sajana</p>
-              <p className="text-xs sm:text-sm text-gray-300">Cosmetic Dentistry</p>
-            </div>
-          </div>
-        </div>
+  <div className="relative bg-white/20 backdrop-blur-md p-6 rounded-2xl shadow-lg border border-white/30">
+    <p className="text-gray-200 mb-4 text-sm sm:text-sm">
+      A Dental Doctor Restores More Than Just Smiles — They Rebuild
+      Confidence, Relieve Pain, And Promote Lasting Oral Health With
+      Precision, Care, And Compassion, One Patient And One Tooth At A
+      Time.
+    </p>
+    <div className="flex items-center gap-3">
+      <img
+        src="/dentist.jpg"
+        alt="Ramisa Sajana"
+        className="w-10 h-10 rounded-full border-2 border-white"
+      />
+      <div>
+        <p className="font-semibold text-sm sm:text-base">Ramisa Sajana</p>
+        <p className="text-xs sm:text-sm text-gray-300">Cosmetic Dentistry</p>
       </div>
+    </div>
+  </div>
+</div>
+
       <div className="bg-[#fef9f8] p-6 sm:p-12 flex items-center">
         <form onSubmit={handleSubmit} className="w-full">
           <h2 className="text-xl sm:text-2xl font-bold mb-2">Quick Appointment</h2>

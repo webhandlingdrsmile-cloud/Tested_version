@@ -112,7 +112,7 @@ const toggleStatus = async (id) => {
         <table className="w-full text-left border-collapse min-w-[800px]">
           <thead className="bg-gray-50">
             <tr>
-              <th className="p-3"><input type="checkbox" /></th>
+              
               <th className="p-3">Full Name</th>
                <th className="p-3">Age</th>
               <th className="p-3">Email Address</th>
@@ -126,7 +126,7 @@ const toggleStatus = async (id) => {
           <tbody>
             {Array.isArray(filteredBookings) && filteredBookings.map((booking) => (
               <tr key={booking._id} className="border-b hover:bg-gray-50 text-xs md:text-sm">
-                <td className="p-3"><input type="checkbox" /></td>
+                
                 <td className="p-3">{booking.firstName} {booking.lastName}</td>
                 <td className="p-3">{booking.age}</td>
                 <td className="p-3">{booking.email}</td>

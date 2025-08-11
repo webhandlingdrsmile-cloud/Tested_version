@@ -102,9 +102,9 @@ export default function ContactsPage() {
   <table className="min-w-full divide-y divide-gray-200">
     <thead className="bg-gray-50">
       <tr>
-        <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+        {/* <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
           <input type="checkbox" />
-        </th>
+        </th> */}
         <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
           Full Name
         </th>
@@ -129,9 +129,9 @@ export default function ContactsPage() {
       {filteredContacts.length > 0 ? (
         filteredContacts.map(([id, contact]) => (
           <tr key={id} className="hover:bg-gray-50 transition-colors">
-            <td className="px-6 py-4 text-center">
+            {/* <td className="px-6 py-4 text-center">
               <input type="checkbox" />
-            </td>
+            </td> */}
             <td className="px-6 py-4 text-sm text-gray-900">{contact.Name}</td>
             <td className="px-6 py-4 text-sm text-gray-900 break-words">{contact.Email}</td>
             <td className="px-6 py-4 text-sm text-gray-900 whitespace-nowrap">
