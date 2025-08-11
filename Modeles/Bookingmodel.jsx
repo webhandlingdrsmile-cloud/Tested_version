@@ -8,6 +8,7 @@ const BookingSchema = new mongoose.Schema({
   age: { type: Number, required: true },
   time: { type: String, required: true },
   date: { type: Date, required: true },
+  status: { type: String, default: 'non consulted', trim: true }, 
   createdAt: { type: Date, default: Date.now } 
 }, { timestamps: true });
 

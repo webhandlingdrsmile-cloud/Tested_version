@@ -12,6 +12,7 @@ export default function QuickAppointment() {
     phone: '',
     age: '',
     time: '',
+    status:'Not Counsulted',
     date: '',
   });
 
@@ -55,6 +56,7 @@ export default function QuickAppointment() {
         age: '',
         time: '',
         date: '',
+        status:'Not Counsulted'
       });
     } catch (error) {
       console.error(error);

@@ -25,7 +25,7 @@ import { MdSupervisorAccount } from "react-icons/md";
 const navItems = [
   { label: 'Levels', icon: FaTachometerAlt, href: '/dashboard/levels' },
   { label: 'Enquiry', icon: FaPhoneAlt, href: '/Dashboard/Contact' },
-  { label: 'Bookings', icon: FaCalendarAlt, href: '/dashboard/bookings' },
+  { label: 'Bookings', icon: FaCalendarAlt, href: '/Dashboard/Bookings' },
   { label: 'Doctors', icon: FaUserMd, href: '/Dashboard/Doctors' },
   { label: 'Services', icon: FaTooth, href: '/Dashboard/Services' },
   { label: 'Blogs', icon: FaNewspaper, href: '/dashboard/blogs' },
