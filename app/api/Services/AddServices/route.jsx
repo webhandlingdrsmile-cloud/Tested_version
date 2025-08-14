@@ -7,15 +7,23 @@ export async function POST(req) {
 
   try {
     const body = await req.json();
-    const { Service: serviceName, Description, Image } = body;
+    const { Service: serviceName, Description, Image, SubServices } = body;
 
+    // Validation
     if (!serviceName || !Description || !Image) {
       return NextResponse.json({ message: 'All fields are required' }, { status: 400 });
     }
+
+    // Validate SubServices if provided
+    if (SubServices && !Array.isArray(SubServices)) {
+      return NextResponse.json({ message: 'SubServices must be an array' }, { status: 400 });
+    }
+
     const newService = new Service({
       Service: serviceName,
       Description,
       Image,
+      SubServices: SubServices || []
     });
 
     await newService.save();
@@ -23,10 +31,9 @@ export async function POST(req) {
     return NextResponse.json({ message: 'Service created successfully' }, { status: 201 });
   } catch (error) {
     console.error('POST Error:', error);
-    return NextResponse.json({ message: 'Server error', error }, { status: 500 });
+    return NextResponse.json({ message: 'Server error', error: error.message }, { status: 500 });
   }
 }
-
 export async function GET() {
   await dbConnect();
 
