@@ -1,221 +1,214 @@
 "use client";
 
 import { useState } from "react";
-import { Menu, X, Facebook, Twitter, Instagram, Youtube, Phone } from "lucide-react";
 import Link from "next/link";
+import { Menu, X, ChevronDown } from "lucide-react";
 
 export default function Navbar() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [servicesOpen, setServicesOpen] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [activeDropdown, setActiveDropdown] = useState(null);
 
-  const toggleMobileMenu = () => {
-    setMobileMenuOpen(!mobileMenuOpen);
-  };
-
-  const toggleServicesMenu = () => {
-    setServicesOpen(!servicesOpen);
-  };
+  const toggleMenu = () => setMenuOpen(!menuOpen);
+  const openDropdown = (menu) =>
+    setActiveDropdown(activeDropdown === menu ? null : menu);
 
   return (
-    <header className="w-full">
-      <div className="bg-[#03414d] text-gray-200 text-xs sm:text-xs md:text-sm flex justify-between items-center px-4 sm:px-10 h-16 sm:h-13">
-        <div className="hidden md:inline text-xs lg:text-sm">Welcome to Dr. Smile Trusted Dental Care for the Whole Family</div>
-        <div className="md:hidden text-xs"></div>
-        <div className="flex items-center space-x-3 sm:space-x-5 text-xs sm:text-sm">
-          <Phone className="w-4 h-4" />
-          <span>+91 0000000000</span>
-          <a href="#" aria-label="Facebook" className="hover:text-white">
-            <Facebook className="w-4 h-4" />
-          </a>
-          <a href="#" aria-label="Twitter" className="hover:text-white">
-            <Twitter className="w-4 h-4" />
-          </a>
-          <a href="#" aria-label="Instagram" className="hover:text-white">
-            <Instagram className="w-4 h-4" />
-          </a>
-          <a href="#" aria-label="Email" className="hover:text-white">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="w-4 h-4"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-              strokeWidth={2}
+    <>
+      {/* ===== Navbar Header ===== */}
+      <header
+        className={`w-full fixed top-0 left-0 z-50 transition-colors duration-300
+          ${menuOpen || activeDropdown ? "bg-[#d7c2ad]" : "backdrop-blur-md"}
+        `}
+      >
+        <div className="mx-auto flex items-center justify-between px-4 sm:px-8 py-3">
+          {/* Logo */}
+          <Link href="/" className="flex items-center">
+            <img
+              src="/images/logo.png"
+              alt="Dr Smile Logo"
+              className="h-12 w-auto"
+            />
+          </Link>
+
+          {/* ===== Desktop Navbar Links ===== */}
+          <nav className="hidden md:flex space-x-6 font-medium text-gray-800 text-lg">
+            <div
+              onMouseEnter={() => setActiveDropdown("about")}
+              onMouseLeave={() => setActiveDropdown(null)}
             >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M16 12l-4-4-4 4m0 0l4 4 4-4m-4 4v-8"
-              />
-            </svg>
-          </a>
-        </div>
-      </div>
-
-      <nav className="bg-white shadow-md">
-        <div className=" mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-16">
-            <div className="flex-shrink-0">
-              <Link href="/">
-                <p className="text-2xl font-bold text-[#03414d] cursor-pointer">Dr.Smile</p>
-              </Link>
-            </div>
-            <div className="hidden lg:flex lg:items-center lg:space-x-6">
-              <Link href="/">
-                <p className="text-gray-700 hover:text-[#03414d] transition cursor-pointer">Home</p>
-              </Link>
-              <Link href="/about">
-                <p className="text-gray-700 hover:text-[#03414d] transition cursor-pointer">About</p>
-              </Link>
-                <Link href="/Contact">
-                <p className="text-gray-700 hover:text-[#03414d] transition cursor-pointer">Contact</p>
-              </Link>
-
-              <Link href="/team">
-                <p className="text-gray-700 hover:text-[#03414d] transition cursor-pointer">Our Team</p>
-              </Link>
-              <Link href="/gallery">
-                <p className="text-gray-700 hover:text-[#03414d] transition cursor-pointer">Gallery</p>
-              </Link>
-              <Link href="/blogs">
-                <p className="text-gray-700 hover:text-[#03414d] transition cursor-pointer">Blogs</p>
-              </Link>
-              <Link href="/Contact">
-                <p className="text-gray-700 hover:text-[#03414d] transition  cursor-pointer">
-                  Contact Us
-                </p>
-              </Link>
-            </div>
-            <div className="hidden lg:block">
-              <Link href="/Booking">
-                <p className="bg-[#03414d] text-white px-4 py-2 rounded hover:bg-[#022a32] transition cursor-pointer">
-                  Book Appointment &rarr;
-                </p>
-              </Link>
-            </div>
-            <div className="lg:hidden flex items-center">
               <button
-                onClick={toggleMobileMenu}
-                aria-label="Toggle menu"
-                className="text-[#03414d] hover:text-[#022a32]"
+                onClick={() => openDropdown("about")}
+                className={`hover:text-[#5a2e1e] text-white text-sm ${
+                  activeDropdown === "about" ? "text-[#5a2e1e]" : ""
+                }`}
               >
-                {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+                About Us
               </button>
             </div>
+
+            <div
+              onMouseEnter={() => setActiveDropdown("services")}
+              onMouseLeave={() => setActiveDropdown(null)}
+            >
+              <button
+                onClick={() => openDropdown("services")}
+                className={`hover:text-[#5a2e1e] text-white text-sm ${
+                  activeDropdown === "services" ? "text-[#5a2e1e]" : ""
+                }`}
+              >
+                Services
+              </button>
+            </div>
+
+            <Link href="/teams" className="hover:text-[#5a2e1e] text-white text-sm">
+              Our Teams
+            </Link>
+            <Link href="/gallery" className="hover:text-[#5a2e1e] text-white text-sm">
+              Gallery
+            </Link>
+            <Link href="/blogs" className="hover:text-[#5a2e1e] text-white text-sm">
+              Blogs
+            </Link>
+            <Link href="/contact" className="hover:text-[#5a2e1e] text-white text-sm">
+              Contact
+            </Link>
+          </nav>
+
+          {/* ===== Floating Button (Mobile Only) ===== */}
+          <button
+            onClick={toggleMenu}
+            className="md:hidden w-12 h-12 flex items-center justify-center rounded-full bg-white shadow-lg hover:shadow-xl transition z-50"
+          >
+            {menuOpen ? (
+              <X size={20} className="text-[#5a2e1e]" />
+            ) : (
+              <Menu size={20} className="text-[#5a2e1e]" />
+            )}
+          </button>
+        </div>
+      </header>
+
+      {/* ===== Desktop Dropdown Overlay ===== */}
+      {(menuOpen || activeDropdown) && (
+        <div className="hidden md:flex fixed inset-0 bg-[#d7c2ad] z-40 h-1/2 flex-row mt-[72px]">
+          {/* Left image */}
+          <div className="w-1/3 h-full px-4">
+            <img
+              src="https://www.bartonassociates.com/wp-content/uploads/2024/10/Blog-Twitter-Facebook-1080x1080-86-1024x1024-1.jpg"
+              alt="Preview"
+              className="w-full h-full object-cover"
+            />
+          </div>
+
+          {/* Content */}
+          <div className="flex-1 p-8 overflow-y-auto">
+            <div className="flex justify-between items-center mb-6">
+              <h2 className="text-2xl font-semibold text-gray-900">
+                {activeDropdown === "about"
+                  ? "About Us"
+                  : activeDropdown === "services"
+                  ? "Services"
+                  : ""}
+              </h2>
+            </div>
+
+            {/* About Us Content */}
+            {activeDropdown === "about" && (
+              <div className="prose max-w-3xl text-gray-800">
+                <p>
+                  Welcome to Dr. Smile! We are committed to providing
+                  world-class dental care with modern technology and
+                  personalized treatment.
+                </p>
+                <p>
+                  Our team of experienced doctors ensures that every
+                  patient walks out with a healthy and confident smile.
+                </p>
+              </div>
+            )}
+
+            {/* Services Content */}
+            {activeDropdown === "services" && (
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-gray-800">
+                <Link href="/services/orthodontics">Orthodontics Department</Link>
+                <Link href="/services/cosmetic-dentistry">Cosmetic Dentistry</Link>
+                <Link href="/services/endodontics">Endodontics (Root Canal)</Link>
+                <Link href="/services/pediatric-dentistry">Pediatric Dentistry</Link>
+                <Link href="/services/prosthodontics">Prosthodontics</Link>
+                <Link href="/services/implant-dentistry">Implant Dentistry</Link>
+                <Link href="/services/periodontics">Periodontics</Link>
+                <Link href="/services/oral-surgery">Oral Surgery</Link>
+                <Link href="/services/digital-dentistry">Digital Dentistry</Link>
+              </div>
+            )}
           </div>
         </div>
-        {mobileMenuOpen && (
-          <div className="lg:hidden bg-white border-t border-gray-200">
-            <div className="px-4 pt-2 pb-4 space-y-2">
-              <Link href="/">
-                <p
-                  onClick={() => setMobileMenuOpen(false)}
-                  className="block px-3 py-2 rounded hover:bg-[#03414d] hover:text-white transition cursor-pointer"
-                >
-                  Home
-                </p>
-              </Link>
-              <Link href="/about">
-                <p
-                  onClick={() => setMobileMenuOpen(false)}
-                  className="block px-3 py-2 rounded hover:bg-[#03414d] hover:text-white transition cursor-pointer"
-                >
-                  About
-                </p>
-              </Link>
-              <div>
-                <button
-                  onClick={() => setServicesOpen(!servicesOpen)}
-                  className="flex justify-between items-center w-full px-3 py-2 rounded hover:bg-[#03414d] hover:text-white transition focus:outline-none"
-                >
-                  Services
-                  <svg
-                    className={`h-4 w-4 transform ${servicesOpen ? "rotate-180" : "rotate-0"}`}
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    viewBox="0 0 24 24"
-                  >
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
-                  </svg>
-                </button>
-                {servicesOpen && (
-                  <div className="pl-4">
-                    <Link href="/services/checkup">
-                      <p
-                        onClick={() => setMobileMenuOpen(false)}
-                        className="block px-3 py-2 rounded hover:bg-[#03414d] hover:text-white transition cursor-pointer"
-                      >
-                        Checkup
-                      </p>
-                    </Link>
-                    <Link href="/services/cleaning">
-                      <p
-                        onClick={() => setMobileMenuOpen(false)}
-                        className="block px-3 py-2 rounded hover:bg-[#03414d] hover:text-white transition cursor-pointer"
-                      >
-                        Cleaning
-                      </p>
-                    </Link>
-                    <Link href="/services/whitening">
-                      <p
-                        onClick={() => setMobileMenuOpen(false)}
-                        className="block px-3 py-2 rounded hover:bg-[#03414d] hover:text-white transition cursor-pointer"
-                      >
-                        Whitening
-                      </p>
-                    </Link>
-                  </div>
-                )}
-              </div>
+      )}
 
-              <Link href="/team">
-                <p
-                  onClick={() => setMobileMenuOpen(false)}
-                  className="block px-3 py-2 rounded hover:bg-[#03414d] hover:text-white transition cursor-pointer"
-                >
-                  Our Team
-                </p>
-              </Link>
-              <Link href="/gallery">
-                <p
-                  onClick={() => setMobileMenuOpen(false)}
-                  className="block px-3 py-2 rounded hover:bg-[#03414d] hover:text-white transition cursor-pointer"
-                >
-                  Gallery
-                </p>
-              </Link>
-              <Link href="/blogs">
-                <p
-                  onClick={() => setMobileMenuOpen(false)}
-                  className="block px-3 py-2 rounded hover:bg-[#03414d] hover:text-white transition cursor-pointer"
-                >
-                  Blogs
-                </p>
-              </Link>
-              <Link href="/contact">
-                <p
-                  onClick={() => setMobileMenuOpen(false)}
-                  className="block px-3 py-2 rounded hover:bg-[#03414d] hover:text-white font-semibold transition cursor-pointer"
-                >
-                  Contact Us
-                </p>
-              </Link>
-
-              <div className="mt-2 px-3">
-                <Link href="/Booking">
-                  <p
-                    onClick={() => setMobileMenuOpen(false)}
-                    className="block bg-[#03414d] text-white text-center py-2 rounded hover:bg-[#022a32] transition cursor-pointer"
-                  >
-                    Book Appointment &rarr;
+      {/* ===== Mobile Slide Down Nav ===== */}
+      {menuOpen && (
+        <div className="md:hidden fixed top-[72px] left-0 w-full bg-[#d7c2ad] h-screen z-40 shadow-lg">
+          <ul className="flex flex-col p-6 space-y-4 text-gray-800 font-medium text-lg">
+            <li>
+              <button
+                onClick={() => openDropdown("about")}
+                className="flex items-center justify-between w-full hover:text-[#5a2e1e]"
+              >
+                About Us <ChevronDown size={18} />
+              </button>
+              {activeDropdown === "about" && (
+                <div className="pl-4 mt-2 text-sm text-gray-700">
+                  <p>
+                    Welcome to Dr. Smile! We are committed to world-class dental
+                    care with modern technology and personalized treatment.
                   </p>
-                </Link>
-              </div>
-            </div>
-          </div>
-        )}
-      </nav>
-    </header>
+                </div>
+              )}
+            </li>
+            <li>
+              <button
+                onClick={() => openDropdown("services")}
+                className="flex items-center justify-between w-full hover:text-[#5a2e1e]"
+              >
+                Services <ChevronDown size={18} />
+              </button>
+              {activeDropdown === "services" && (
+                <div className="pl-4 mt-2 flex flex-col space-y-2 text-sm text-gray-700">
+                  <Link href="/services/orthodontics">Orthodontics</Link>
+                  <Link href="/services/cosmetic-dentistry">Cosmetic Dentistry</Link>
+                  <Link href="/services/endodontics">Endodontics</Link>
+                  <Link href="/services/pediatric-dentistry">Pediatric Dentistry</Link>
+                  <Link href="/services/prosthodontics">Prosthodontics</Link>
+                  <Link href="/services/implant-dentistry">Implant Dentistry</Link>
+                  <Link href="/services/periodontics">Periodontics</Link>
+                  <Link href="/services/oral-surgery">Oral Surgery</Link>
+                  <Link href="/services/digital-dentistry">Digital Dentistry</Link>
+                </div>
+              )}
+            </li>
+            <li>
+              <Link href="/teams" className="hover:text-[#5a2e1e]">
+                Our Teams
+              </Link>
+            </li>
+            <li>
+              <Link href="/gallery" className="hover:text-[#5a2e1e]">
+                Gallery
+              </Link>
+            </li>
+            <li>
+              <Link href="/blogs" className="hover:text-[#5a2e1e]">
+                Blogs
+              </Link>
+            </li>
+            <li>
+              <Link href="/contact" className="hover:text-[#5a2e1e]">
+                Contact Us
+              </Link>
+            </li>
+          </ul>
+        </div>
+      )}
+    </>
   );
 }

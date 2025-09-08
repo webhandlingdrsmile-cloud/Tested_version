@@ -38,7 +38,7 @@ export default function Login() {
   return (
     <div className="min-h-screen grid grid-cols-1 xl:grid-cols-2">
       
-      <div className="bg-[#083c44] text-white flex flex-col items-center justify-center p-10">
+      <div className="bg-[#704532] text-white flex flex-col items-center justify-center p-10">
         <h1 className="text-3xl font-bold mb-6 font-poppins">Dr.Smile</h1>
         <img
           src="/Images/loginp1.png"
@@ -55,7 +55,7 @@ export default function Login() {
         </p>
       </div>
 
-      <div className="bg-white flex flex-col justify-center px-8 py-12 lg:px-24">
+      <div className="bg-[#E1D5C9] flex flex-col justify-center px-8 py-12 lg:px-24">
         <div className="max-w-md w-full mx-auto">
           <h2 className="text-2xl xl:text-4xl font-bold mb-2 text-gray-800 text-center font-poppins">
             log In
@@ -122,7 +122,7 @@ export default function Login() {
             <button
               type="submit"
               disabled={loading}
-              className={`w-full flex justify-center items-center gap-2 bg-[#083c44] hover:bg-[#0a505a] text-white font-semibold py-2 px-4 rounded-md ${
+              className={`w-full flex justify-center items-center gap-2 bg-[#704532] hover:bg-[#704532] text-white font-semibold py-2 px-4 rounded-md ${
                 loading ? 'opacity-50 cursor-not-allowed' : ''
               }`}
             >
