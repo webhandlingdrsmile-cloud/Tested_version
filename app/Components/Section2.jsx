@@ -42,7 +42,7 @@ export default function Section2() {
             <img
               src="/Images/D.webp"
               alt="Dr. John Doe - BDS, MDS Orthodontics Specialist"
-              className="w-full h-64 sm:h-72 md:h-80 lg:h-96 xl:h-130 object-cover transition-transform duration-500 group-hover:scale-110"
+              className="w-full h-96 sm:h-96 md:h-80 lg:h-96 xl:h-130 object-cover transition-transform duration-500 group-hover:scale-110"
               loading="lazy"
             />
             <figcaption className="absolute bottom-0 left-0 right-0 bg-black/70 text-white py-3 px-4 text-sm text-center opacity-0 translate-y-full group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
@@ -60,7 +60,7 @@ export default function Section2() {
             <img
               src="/Images/D.webp"
               alt="Dr. Reshma S - BDS, MDS Orthodontics Specialist"
-              className="w-full h-64 sm:h-72 md:h-80 lg:h-96 xl:h-130 object-cover transition-transform duration-500 group-hover:scale-110"
+              className="w-full h-96 sm:h-96 md:h-80 lg:h-96 xl:h-130 object-cover transition-transform duration-500 group-hover:scale-110"
               loading="lazy"
             />
             <figcaption className="absolute bottom-0 left-0 right-0 bg-black/70 text-white py-3 px-4 text-sm text-center opacity-0 translate-y-full group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
@@ -78,7 +78,7 @@ export default function Section2() {
             <img
               src="/Images/D.webp"
               alt="Dr. Alex Smith - BDS, MDS Orthodontics Specialist"
-              className="w-full h-64 sm:h-72 md:h-80 lg:h-96 xl:h-130 object-cover transition-transform duration-500 group-hover:scale-110"
+              className="w-full h-96 sm:h-96 md:h-80 lg:h-96 xl:h-130 object-cover transition-transform duration-500 group-hover:scale-110"
               loading="lazy"
             />
             <figcaption className="absolute bottom-0 left-0 right-0 bg-black/70 text-white py-3 px-4 text-sm text-center opacity-0 translate-y-full group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
