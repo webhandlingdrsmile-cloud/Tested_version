@@ -3,17 +3,18 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Menu, X, ChevronDown, Check } from "lucide-react";
+import { Menu, X, ChevronDown, ChevronUp, Check } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState(null); // desktop
-  const [mobileDropdown, setMobileDropdown] = useState(null); // mobile
+  const [activeDropdown, setActiveDropdown] = useState(null); // desktop dropdown
+  const [forceOpen, setForceOpen] = useState(false);
+  const [mobileDropdown, setMobileDropdown] = useState(false); // mobile dropdown
   const [selectedService, setSelectedService] = useState(null);
 
   const pathname = usePathname();
 
-  // ✅ Auto-select service on page load if URL matches
   useEffect(() => {
     if (pathname.startsWith("/services")) {
       setSelectedService(pathname);
@@ -21,12 +22,17 @@ export default function Navbar() {
   }, [pathname]);
 
   const toggleMenu = () => setMenuOpen((prev) => !prev);
-  const openDropdown = (menu) =>
-    setActiveDropdown((prev) => (prev === menu ? null : menu));
-  const toggleMobileDropdown = (menu) =>
-    setMobileDropdown((prev) => (prev === menu ? null : menu));
 
-  // ✅ Services List
+  const toggleDropdown = (menu) => {
+    if (activeDropdown === menu && forceOpen) {
+      setActiveDropdown(null);
+      setForceOpen(false);
+    } else {
+      setActiveDropdown(menu);
+      setForceOpen(true);
+    }
+  };
+
   const services = [
     { href: "/services/orthodontics", label: "Orthodontics Department" },
     { href: "/services/cosmetic-dentistry", label: "Cosmetic Dentistry" },
@@ -59,30 +65,23 @@ export default function Navbar() {
 
           {/* ===== Desktop Links ===== */}
           <nav className="hidden md:flex space-x-6 font-medium">
-            {/* About Us */}
-            <div
-              onMouseEnter={() => setActiveDropdown("about")}
-              onMouseLeave={() => setActiveDropdown(null)}
+            <Link
+              href="/about"
+              className="text-sm text-white hover:text-[#5a2e1e]"
             >
-              <button
-                onClick={() => openDropdown("about")}
-                className={`text-sm ${
-                  activeDropdown === "about"
-                    ? "text-[#5a2e1e]"
-                    : "text-white hover:text-[#5a2e1e]"
-                }`}
-              >
-                About Us
-              </button>
-            </div>
+              About Us
+            </Link>
 
-            {/* Services */}
             <div
-              onMouseEnter={() => setActiveDropdown("services")}
-              onMouseLeave={() => setActiveDropdown(null)}
+              onMouseEnter={() => {
+                if (!forceOpen) setActiveDropdown("services");
+              }}
+              onMouseLeave={() => {
+                if (!forceOpen) setActiveDropdown(null);
+              }}
             >
               <button
-                onClick={() => openDropdown("services")}
+                onClick={() => toggleDropdown("services")}
                 className={`text-sm ${
                   activeDropdown === "services"
                     ? "text-[#5a2e1e]"
@@ -93,7 +92,6 @@ export default function Navbar() {
               </button>
             </div>
 
-            {/* Other Links */}
             <Link href="/teams" className="text-white hover:text-[#5a2e1e] text-sm">
               Our Teams
             </Link>
@@ -122,154 +120,142 @@ export default function Navbar() {
         </div>
       </header>
 
-      {/* ===== Desktop Dropdown ===== */}
-      {activeDropdown && (
-        <div className="hidden md:flex fixed inset-x-0 top-[72px] bg-[#d7c2ad] z-40 h-1/2">
-          {/* Left Image */}
-          <div className="w-1/3 h-full">
-            <img
-              src="https://www.bartonassociates.com/wp-content/uploads/2024/10/Blog-Twitter-Facebook-1080x1080-86-1024x1024-1.jpg"
-              alt="Preview"
-              className="w-full h-full object-cover"
-            />
-          </div>
+      {/* ===== Desktop Dropdown (Services only) ===== */}
+      <AnimatePresence>
+        {activeDropdown === "services" && (
+          <motion.div
+            key="services-dropdown"
+            initial={{ opacity: 0, y: -15 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -15 }}
+            transition={{ duration: 0.25 }}
+            className="hidden md:flex fixed inset-x-0 top-[72px] bg-[#d7c2ad] z-40 h-1/2"
+          >
+            {/* Left Image */}
+            <div className="w-1/3 h-full p-10">
+              <img
+                src="https://www.bartonassociates.com/wp-content/uploads/2024/10/Blog-Twitter-Facebook-1080x1080-86-1024x1024-1.jpg"
+                alt="Preview"
+                className="w-full h-full object-cover rounded-xl"
+              />
+            </div>
 
-          {/* Dropdown Content */}
-          <div className="flex-1 p-8 overflow-y-auto">
-            {activeDropdown === "about" && (
-              <>
-                <h2 className="text-2xl font-semibold text-gray-900 mb-4">
-                  About Us
-                </h2>
-                <p className="text-gray-700 mb-2">
-                  Welcome to Dr. Smile! We are committed to providing world-class
-                  dental care with modern technology and personalized treatment.
-                </p>
-                <p className="text-gray-700">
-                  Our team of experienced doctors ensures that every patient
-                  leaves with a confident and healthy smile.
-                </p>
-              </>
-            )}
-
-            {activeDropdown === "services" && (
-              <>
-                <h2 className="text-2xl font-semibold text-gray-900 mb-4">
-                  Services
-                </h2>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-gray-800">
-                  {services.map((service) => (
-                    <Link
-                      key={service.href}
-                      href={service.href}
-                      onClick={() => {
-                        setSelectedService(service.href);
-                        setActiveDropdown(null);
-                      }}
-                      className={`flex items-center p-2 rounded-md transition-colors ${
-                        selectedService === service.href
-                          ? "bg-[#5a2e1e] text-white"
-                          : "hover:bg-[#e8d9cb]"
-                      }`}
+            {/* Dropdown Content */}
+            <div className="flex-1 p-8 overflow-y-auto">
+              <h2 className="text-2xl font-semibold text-gray-900 mb-4">
+                Services
+              </h2>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-gray-800">
+                {services.map((service) => (
+                  <Link
+                    key={service.href}
+                    href={service.href}
+                    onClick={() => {
+                      setSelectedService(service.href);
+                      setActiveDropdown(null);
+                      setForceOpen(false);
+                    }}
+                    className={`flex items-center p-2 rounded-md transition-colors ${
+                      selectedService === service.href
+                        ? "bg-[#5a2e1e] text-white"
+                        : "hover:bg-[#e8d9cb]"
+                    }`}
+                  >
+                    {selectedService === service.href && (
+                      <Check size={16} className="mr-2" />
+                    )}
+                    <span
+                      className={selectedService === service.href ? "ml-6" : ""}
                     >
-                      {selectedService === service.href && (
-                        <Check size={16} className="mr-2" />
-                      )}
-                      <span className={selectedService === service.href ? "ml-6" : ""}>
-                        {service.label}
-                      </span>
-                    </Link>
-                  ))}
-                </div>
-              </>
-            )}
-          </div>
-        </div>
-      )}
+                      {service.label}
+                    </span>
+                  </Link>
+                ))}
+              </div>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
 
       {/* ===== Mobile Menu ===== */}
-      {menuOpen && (
-        <div className="md:hidden fixed top-[72px] left-0 w-full bg-[#d7c2ad] h-screen z-40 shadow-lg overflow-y-auto">
-          <ul className="flex flex-col p-6 space-y-4 text-gray-800 font-medium text-lg">
-            {/* About Us */}
-            <li>
-              <button
-                onClick={() => toggleMobileDropdown("about")}
-                className="flex items-center justify-between w-full hover:text-[#5a2e1e]"
-              >
-                About Us <ChevronDown size={18} />
-              </button>
-              {mobileDropdown === "about" && (
-                <div className="pl-4 mt-2 text-sm text-gray-700">
-                  <p>
-                    Welcome to Dr. Smile! We are committed to world-class dental
-                    care with modern technology and personalized treatment.
-                  </p>
-                </div>
-              )}
-            </li>
+      <AnimatePresence>
+        {menuOpen && (
+          <motion.div
+            key="mobile-menu"
+            initial={{ x: "100%" }}
+            animate={{ x: 0 }}
+            exit={{ x: "100%" }}
+            transition={{ duration: 0.3 }}
+            className="fixed inset-0 bg-[#d7c2ad] z-50 md:hidden flex flex-col p-6 overflow-y-auto"
+          >
+            {/* Close Button */}
+            <button
+              onClick={toggleMenu}
+              className="self-end mb-6 w-12 h-12 flex items-center justify-center rounded-full bg-gray-100"
+            >
+              <X size={22} className="text-gray-700" />
+            </button>
 
-            {/* Services */}
-            <li>
+            {/* Links */}
+            <nav className="flex flex-col space-y-4 text-gray-800 font-medium">
+              <Link href="/about" onClick={toggleMenu}>
+                About Us
+              </Link>
+
+              {/* Mobile Services Dropdown */}
               <button
-                onClick={() => toggleMobileDropdown("services")}
-                className="flex items-center justify-between w-full hover:text-[#5a2e1e]"
+                onClick={() => setMobileDropdown((prev) => !prev)}
+                className="flex items-center justify-between"
               >
-                Services <ChevronDown size={18} />
+                <span>Services</span>
+                {mobileDropdown ? <ChevronUp size={18} /> : <ChevronDown size={18} />}
               </button>
-              {mobileDropdown === "services" && (
-                <div className="pl-4 mt-2 flex flex-col space-y-2 text-sm text-gray-700">
-                  {services.map((service) => (
-                    <Link
-                      key={service.href}
-                      href={service.href}
-                      onClick={() => {
-                        setSelectedService(service.href);
-                        setMenuOpen(false);
-                        setMobileDropdown(null);
-                      }}
-                      className={`flex items-center p-2 rounded-md transition-colors ${
-                        selectedService === service.href
-                          ? "bg-[#5a2e1e] text-white"
-                          : "hover:bg-[#e8d9cb]"
-                      }`}
-                    >
-                      {selectedService === service.href && (
-                        <Check size={16} className="mr-2" />
-                      )}
-                      <span className={selectedService === service.href ? "ml-6" : ""}>
+              <AnimatePresence>
+                {mobileDropdown && (
+                  <motion.div
+                    initial={{ height: 0, opacity: 0 }}
+                    animate={{ height: "auto", opacity: 1 }}
+                    exit={{ height: 0, opacity: 0 }}
+                    className="pl-4 flex flex-col space-y-2"
+                  >
+                    {services.map((service) => (
+                      <Link
+                        key={service.href}
+                        href={service.href}
+                        onClick={() => {
+                          setSelectedService(service.href);
+                          setMenuOpen(false);
+                          setMobileDropdown(false);
+                        }}
+                        className={`text-sm ${
+                          selectedService === service.href
+                            ? "text-[#5a2e1e] font-semibold"
+                            : "text-gray-600 hover:text-[#5a2e1e]"
+                        }`}
+                      >
                         {service.label}
-                      </span>
-                    </Link>
-                  ))}
-                </div>
-              )}
-            </li>
+                      </Link>
+                    ))}
+                  </motion.div>
+                )}
+              </AnimatePresence>
 
-            {/* Other Links */}
-            <li>
-              <Link href="/teams" className="hover:text-[#5a2e1e]">
+              <Link href="/teams" onClick={toggleMenu}>
                 Our Teams
               </Link>
-            </li>
-            <li>
-              <Link href="/gallery" className="hover:text-[#5a2e1e]">
+              <Link href="/gallery" onClick={toggleMenu}>
                 Gallery
               </Link>
-            </li>
-            <li>
-              <Link href="/blogs" className="hover:text-[#5a2e1e]">
+              <Link href="/blogs" onClick={toggleMenu}>
                 Blogs
               </Link>
-            </li>
-            <li>
-              <Link href="/contact" className="hover:text-[#5a2e1e]">
-                Contact Us
+              <Link href="/contact" onClick={toggleMenu}>
+                Contact
               </Link>
-            </li>
-          </ul>
-        </div>
-      )}
+            </nav>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </>
   );
 }
