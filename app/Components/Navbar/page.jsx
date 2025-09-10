@@ -46,7 +46,7 @@ export default function Navbar() {
       <header
         className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
           scrolled || menuOpen
-            ? "bg-[#d7c2ad]/90 shadow-md"
+            ? "backdrop-blur-md "
             : "bg-transparent backdrop-blur-md"
         }`}
       >
