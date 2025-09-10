@@ -100,15 +100,16 @@ export default function Section2() {
             ensuring healthy, confident smiles for the whole family in a
             comfortable, trusted environment.
           </p>
-          <motion.a
-            href="/about"
-            aria-label="Learn more about our dental experts"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="inline-block bg-[#5a2e1e] hover:bg-[#422014] text-white px-5 py-2 rounded-md transition"
-          >
-            Meet Us
-          </motion.a>
+     <motion.a
+  href="/about"
+  aria-label="Learn more about our dental experts"
+  whileHover={{ scale: 1.05 }}
+  whileTap={{ scale: 0.95 }}
+  className="inline-block bg-[#5a2e1e] hover:bg-[#422014] w-40 md:w-60 text-center text-white px-4 py-4 rounded-md text-sm transition"
+>
+  Meet Us
+</motion.a>
+
         </motion.div>
       </motion.div>
     </section>
