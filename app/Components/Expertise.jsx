@@ -5,7 +5,7 @@ import { CheckSquare } from "lucide-react";
 export default function Expertise() {
   return (
     <section>
-      <div className="grid grid-cols-1 lg:grid-cols-2 items-stretch px-2">
+      <div className="grid grid-cols-1 lg:grid-cols-2 items-stretch">
         <div className="bg-[#f5e9dd] p-6 sm:p-10 md:p-16 flex flex-col justify-center h-full">
           <header>
             <h4 className="uppercase text-xs sm:text-sm font-semibold tracking-wider text-gray-600">

@@ -2,9 +2,12 @@
 
 import Experience from "../Components/Experience"
 import Expertise from "../Components/Expertise"
+import Footer from "../Components/Footer/page"
 import Gallery from "../Components/Gallary"
 import Landing from "../Components/Landing"
+import Logo from "../Components/Logo"
 import Section2 from "../Components/Section2"
+import Shedule from "../Components/Shedule"
 import Technology from "../Components/Technology"
 import WhyChooseUs from "../Components/WhyChoose"
 
@@ -18,6 +21,9 @@ export default function Hero(){
             <Expertise/>
             <WhyChooseUs/>
             <Gallery/>
+            <Shedule/>
+            <Logo/>
+            <Footer/>
         </div>
     )
 }
