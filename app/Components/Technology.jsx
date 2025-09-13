@@ -5,19 +5,19 @@ import { motion } from "framer-motion";
 export default function Technology() {
   const technologies = [
     {
-      img: "https://images.pexels.com/photos/6812520/pexels-photo-6812520.jpeg?auto=compress&cs=tinysrgb&w=600",
+      img: "./Images/T2.png",
       title: "Single – Visit Dentistry",
       desc: "Advanced Single-Visit Dentistry: Quick, Comfortable, Lasting Smiles.",
       alt: "Dentist consulting a patient for single-visit dental treatment"
     },
     {
-      img: "https://images.pexels.com/photos/6812526/pexels-photo-6812526.jpeg?auto=compress&cs=tinysrgb&w=600",
+      img: "./Images/T3.png",
       title: "Robot – Guided Implant Placement",
       desc: "Precision, Safety, Comfort—Robot-Guided Implants Ensure Perfect Smiles.",
       alt: "Dental implant placement using advanced robot-guided technology"
     },
     {
-      img: "https://images.pexels.com/photos/3779705/pexels-photo-3779705.jpeg?auto=compress&cs=tinysrgb&w=600",
+      img: "./Images/T4.png",
       title: "No – Shot Laser Fillings",
       desc: "Painless, Precise Laser Fillings For Healthier, Stress-Free Smiles.",
       alt: "Patient receiving painless no-shot laser dental fillings"
@@ -26,14 +26,14 @@ export default function Technology() {
 
   return (
     <section
-      className="relative bg-cover bg-center text-white py-16"
+      className="relative bg-cover bg-center text-white py-20"
       aria-labelledby="technology-heading"
       style={{
         backgroundImage:
-          "url('https://static.vecteezy.com/system/resources/thumbnails/024/697/670/small_2x/pink-particles-with-white-pink-rays-background-video.jpg')"
+          "url('./Images/T1.png')"
       }}
     >
-      <div className="absolute inset-0 bg-black/70" aria-hidden="true"></div>
+      <div className="absolute inset-0 bg-black/30" aria-hidden="true"></div>
       <div className="relative z-10 px-6 md:px-16 lg:px-24">
         <motion.header
           className="text-center mb-12"

@@ -40,7 +40,7 @@ export default function Section2() {
         >
           <figure>
             <img
-              src="/Images/D.webp"
+              src="/Images/D1.png"
               alt="Dr. John Doe - BDS, MDS Orthodontics Specialist"
               className="w-full h-96 sm:h-96 md:h-80 lg:h-96 xl:h-130 object-cover transition-transform duration-500 group-hover:scale-110"
               loading="lazy"
@@ -58,7 +58,7 @@ export default function Section2() {
         >
           <figure>
             <img
-              src="/Images/D.webp"
+              src="/Images/D2.png"
               alt="Dr. Reshma S - BDS, MDS Orthodontics Specialist"
               className="w-full h-96 sm:h-96 md:h-80 lg:h-96 xl:h-130 object-cover transition-transform duration-500 group-hover:scale-110"
               loading="lazy"
@@ -76,7 +76,7 @@ export default function Section2() {
         >
           <figure>
             <img
-              src="/Images/D.webp"
+              src="/Images/D3.png"
               alt="Dr. Alex Smith - BDS, MDS Orthodontics Specialist"
               className="w-full h-96 sm:h-96 md:h-80 lg:h-96 xl:h-130 object-cover transition-transform duration-500 group-hover:scale-110"
               loading="lazy"

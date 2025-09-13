@@ -39,13 +39,13 @@ export default function Landing() {
         <div className="flex flex-col sm:flex-row items-center gap-4">
           <a
             href="#appointment"
-            className="w-full sm:w-auto bg-[#704532] hover:bg-[#704532] text-white px-6 py-3 rounded-lg font-medium shadow-md transition text-center"
+            className="w-full sm:w-auto bg-[#704532] hover:bg-[#704532] text-white px-6 py-3  font-medium shadow-md transition text-center"
           >
             Book Appointment
           </a>
           <a
             href="tel:+918296099118"
-            className="w-full sm:w-auto flex items-center justify-center border border-white/40 px-5 py-3 rounded-lg text-sm hover:bg-white/10 transition"
+            className="w-full sm:w-auto flex items-center justify-center border border-white/40 px-5 py-3  text-sm hover:bg-white/10 transition"
             aria-label="Call Dr. Smile dental clinic"
           >
             Call: +91-8296099118

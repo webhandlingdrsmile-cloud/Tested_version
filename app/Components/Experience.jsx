@@ -41,7 +41,7 @@ export default function Experience() {
         className="w-full h-[400px] lg:h-auto overflow-hidden"
       >
         <motion.img
-          src="https://media.gettyimages.com/id/1317804578/photo/one-businesswoman-headshot-smiling-at-the-camera.jpg?s=612x612&w=gi&k=20&c=tFkDOWmEyqXQmUHNxkuR5TsmRVLi5VZXYm3mVsjee0E="
+          src="./Images/E1.png"
           alt="Smiling patient at Dr Smile Dental Clinic"
           className="w-full h-full object-cover"
           loading="lazy"
@@ -93,8 +93,6 @@ export default function Experience() {
             restorative treatments, we ensure personalized solutions for every dental
             need.
           </motion.p>
-
-          {/* Mission & Vision */}
           <motion.div
             variants={fadeInUp}
             className="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-6"
@@ -119,13 +117,11 @@ export default function Experience() {
               </div>
             </motion.article>
           </motion.div>
-
-          {/* CTA */}
           <motion.div variants={fadeInUp} className="pt-6">
             <motion.a
               href="/about"
               aria-label="Learn more about Dr Smile Dental Clinic"
-              className="inline-flex items-center gap-2 bg-[#5a2e1e] hover:bg-[#422014] text-white px-5 py-2 rounded-md transition"
+              className="inline-flex items-center gap-2 bg-[#5a2e1e] hover:bg-[#422014] text-white px-5 py-3  transition"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >

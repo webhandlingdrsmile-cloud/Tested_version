@@ -2,6 +2,7 @@
 
 import Experience from "../Components/Experience"
 import Expertise from "../Components/Expertise"
+import Gallery from "../Components/Gallary"
 import Landing from "../Components/Landing"
 import Section2 from "../Components/Section2"
 import Technology from "../Components/Technology"
@@ -16,6 +17,7 @@ export default function Hero(){
             <Technology/>
             <Expertise/>
             <WhyChooseUs/>
+            <Gallery/>
         </div>
     )
 }
