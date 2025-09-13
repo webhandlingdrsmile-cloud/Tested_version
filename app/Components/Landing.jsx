@@ -41,7 +41,7 @@ export default function Landing() {
             href="#appointment"
             className="w-full sm:w-auto bg-[#704532] hover:bg-[#704532] text-white px-6 py-3 rounded-lg font-medium shadow-md transition text-center"
           >
-            Book Dental Appointment
+            Book Appointment
           </a>
           <a
             href="tel:+918296099118"

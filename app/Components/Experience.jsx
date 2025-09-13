@@ -4,7 +4,7 @@ import { Play, Heart, Shield } from "lucide-react";
 import { motion } from "framer-motion";
 
 export default function Experience() {
-  // Variants for staggered animation
+
   const container = {
     hidden: { opacity: 0 },
     show: {
@@ -33,7 +33,6 @@ export default function Experience() {
       className="w-full grid grid-cols-1 lg:grid-cols-2 overflow-x-hidden"
       aria-label="Dental Experience Section"
     >
-      {/* Left Image */}
       <motion.figure
         initial="hidden"
         whileInView="show"
@@ -54,7 +53,6 @@ export default function Experience() {
         </figcaption>
       </motion.figure>
 
-      {/* Right Content */}
       <motion.article
         initial="hidden"
         whileInView="show"
