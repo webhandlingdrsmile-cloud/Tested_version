@@ -5,6 +5,8 @@ import AboutLanding from "../Components/AboutPages/Aboutlanding"
 import AboutStory from "../Components/AboutPages/AboutStory"
 import WhyPatients from "../Components/AboutPages/AboutWhyP"
 import ReshmaDr from "../Components/AboutPages/ReshmaDr"
+import Logo from "../Components/Logo"
+import Schedule from "../Components/Shedule"
 
 export default function about(){
     return(
@@ -14,6 +16,8 @@ export default function about(){
             <ReshmaDr/>
             <AboutDental/>
             <WhyPatients/>
+            <Schedule/>
+            <Logo/>
         </div>
     )
 }
