@@ -2,7 +2,7 @@
 
 export default function AboutStory() {
   return (
-    <section className="bg-[#E1D5C9] py-12 px-6 lg:px-0 container mx-auto py-5">
+    <section className="bg-[#E1D5C9] py-12 px-6 xl:px-0 container mx-auto py-5 ">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-16 items-center">
         
         <div className="flex justify-center md:justify-end ">
