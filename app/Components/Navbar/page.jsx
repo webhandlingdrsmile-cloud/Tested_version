@@ -46,8 +46,8 @@ export default function Navbar() {
       <header
         className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
           scrolled || menuOpen
-            ? "backdrop-blur-md "
-            : "bg-transparent backdrop-blur-md"
+            ? " "
+            : "bg-transparent "
         }`}
       >
         <div className="mx-auto flex items-center justify-between px-4 sm:px-8 py-3">
@@ -62,7 +62,7 @@ export default function Navbar() {
 
           {/* ===== Desktop Menu ===== */}
           <nav className="hidden md:flex space-x-8 font-medium items-center text-white">
-            <Link href="/about" className="hover:text-[#5a2e1e]">
+            <Link href="/About" className="hover:text-[#5a2e1e]">
               About Us
             </Link>
 

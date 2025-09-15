@@ -1,23 +1,11 @@
 @import "tailwindcss";
 
 @font-face {
-  font-family: 'Reddit';
-  src: url('/Fonts/RedditSans-SemiBold.ttf') format('truetype');
-  font-style: normal;
-  font-display: swap;
+  font-family: 'CustomFont'; 
+  src: url('/Fonts/poppins.light.ttf') format('truetype');
 }
 
-@font-face {
-  font-family: 'Poppins';
-  src: url('/Fonts/Poppins-Medium.ttf') format('truetype');
-  font-style: normal;
-  font-display: swap;
-}
 
-body {
-  font-family: 'Poppins', sans-serif;
-}
-
-.reddit-font {
-  font-family: 'Reddit', sans-serif;
+html, body {
+  font-family: 'CustomFont', sans-serif;
 }

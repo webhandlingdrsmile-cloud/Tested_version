@@ -9,6 +9,7 @@ import Logo from "../Components/Logo"
 import Section2 from "../Components/Section2"
 import Shedule from "../Components/Shedule"
 import Technology from "../Components/Technology"
+import Testimonials from "../Components/Testimonials"
 import WhyChooseUs from "../Components/WhyChoose"
 
 export default function Hero(){
@@ -23,7 +24,8 @@ export default function Hero(){
             <Gallery/>
             <Shedule/>
             <Logo/>
-            <Footer/>
+            <Testimonials/>
+        
         </div>
     )
 }
