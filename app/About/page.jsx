@@ -7,6 +7,7 @@ import WhyPatients from "../Components/AboutPages/AboutWhyP"
 import ReshmaDr from "../Components/AboutPages/ReshmaDr"
 import Logo from "../Components/Logo"
 import Schedule from "../Components/Shedule"
+import Testimonials from "../Components/Testimonials"
 
 export default function about(){
     return(
@@ -18,6 +19,7 @@ export default function about(){
             <WhyPatients/>
             <Schedule/>
             <Logo/>
+            <Testimonials/>
         </div>
     )
 }
