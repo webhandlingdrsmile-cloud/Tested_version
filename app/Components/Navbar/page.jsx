@@ -164,7 +164,7 @@ export default function Navbar() {
 
             {/* Links */}
             <nav className="flex flex-col space-y-4 text-gray-800 font-medium">
-              <Link href="/about" onClick={() => setMenuOpen(false)}>
+              <Link href="/About" onClick={() => setMenuOpen(false)}>
                 About Us
               </Link>
 

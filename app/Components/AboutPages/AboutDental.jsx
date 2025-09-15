@@ -6,7 +6,7 @@ import { Play } from "lucide-react";
 export default function AboutDental() {
   return (
     <main className="bg-transparent">
-      <section className=" mx-auto py-12 px-6 grid  grid-cols-3 text-center gap-8">
+      <section className=" mx-auto py-12 xl:py-20 px-6 grid  grid-cols-3 text-center gap-8">
         <div>
           <h2 className="text-xs md:text-3xl font-bold">10+ Years</h2>
           <p className="text-gray-700 text-xs">Dental Excellence</p>
@@ -22,9 +22,9 @@ export default function AboutDental() {
       </section>
 
       <section className="grid grid-cols-1 md:grid-cols-2 ">
-        <div className="bg-[url('/Images/AS2.png')] text-white p-20 flex flex-col justify-center ">
+        <div className="bg-[url('/Images/AS2.png')] text-white p-20  flex flex-col justify-center ">
           <div className="mb-4">
-            <span className="text-3xl">🦷</span>
+            <img src="./Images/Y1.png" alt="" className="w-10 h-10 xl:w-20 xl:h-20"/>
           </div>
           <h3 className="text-lg md:text-xl font-semibold mb-2">General Dentistry</h3>
           <p className="mb-4 text-sm text-gray-200">
@@ -36,37 +36,37 @@ export default function AboutDental() {
         </div>
         <div className="bg-[url('/Images/AS1.png')] bg-cover text-black p-20 flex flex-col justify-center ">
           <div className="mb-4">
-            <span className="text-3xl">😁</span>
+              <img src="./Images/Y2.png" alt="" className="w-10 h-10 xl:w-20 xl:h-20"/>
           </div>
           <h3 className="text-lg md:text-xl font-semibold mb-2">Orthodontics</h3>
           <p className="mb-4 text-gray-600 text-sm">
             Lorem Ipsum is simply dummy text of the printing and typesetting industry.
           </p>
-          <button className="bg-black text-white px-4 py-2 rounded shadow w-fit">
+          <button className="bg-black text-white px-4 py-2  w-fit">
             Learn More
           </button>
         </div>
         <div className="bg-[url('/Images/AS1.png')] bg-cover text-black p-20 flex flex-col justify-center">
           <div className="mb-4">
-            <span className="text-3xl">🦷</span>
+          <img src="./Images/Y3.png" alt="" className="w-10 h-10 xl:w-20 xl:h-20"/>
           </div>
           <h3 className="text-lg md:text-xl font-semibold mb-2">Implants & Restorations</h3>
           <p className="mb-4 text-gray-600 text-sm">
             Lorem Ipsum is simply dummy text of the printing and typesetting industry.
           </p>
-          <button className="bg-black text-white px-4 py-2 rounded shadow w-fit">
+          <button className="bg-black text-white px-4 py-2  w-fit">
             Learn More
           </button>
         </div>
         <div className="bg-[url('/Images/AS3.png')] text-white p-20 flex flex-col justify-center">
           <div className="mb-4">
-            <span className="text-3xl">✨</span>
+           <img src="./Images/Y4.png" alt="" className="w-10 h-10 xl:w-20 xl:h-20"/>
           </div>
           <h3 className="text-lg md:text-xl font-semibold mb-2">Cosmetic Dentistry</h3>
           <p className="mb-4 text-gray-200 text-sm">
             Lorem Ipsum is simply dummy text of the printing and typesetting industry.
           </p>
-          <button className="bg-white text-black px-4 py-2 rounded shadow w-fit">
+          <button className="bg-white text-black px-4 py-2  w-fit">
             Learn More
           </button>
         </div>
