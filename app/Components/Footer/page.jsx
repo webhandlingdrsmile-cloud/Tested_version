@@ -6,7 +6,6 @@ export default function Footer() {
     <footer className="bg-black text-gray-300">
       {/* Top Section */}
       <div className=" mx-auto px-6 py-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10">
-        {/* Logo & About */}
         <div>
           <img
             src="./Images/Logo.png"

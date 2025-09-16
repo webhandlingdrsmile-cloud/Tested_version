@@ -4,6 +4,7 @@ import { useState } from "react";
 import axios from "axios";
 import Head from "next/head";
 import { MapPin, Phone, Mail, Clock } from "lucide-react";
+import FounderSection from "../Components/ContactPages/Founder";
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -81,8 +82,8 @@ export default function ContactPage() {
       </Head>
       <div className="w-full">
       <div
-  className="relative bg-cover bg-center h-56 sm:h-96 flex items-center"
-  style={{ backgroundImage: "url('/Images/Cpage.png')" }}
+  className="relative bg-cover bg-center h-56 sm:h-110 flex items-center"
+  style={{ backgroundImage: "url('/Images/C1.png')" }}
 >
   <div className="absolute inset-0 bg-black/50"></div>
   <div className="relative z-10 top-0 px-6 sm:px-8 text-white text-left">
@@ -92,7 +93,7 @@ export default function ContactPage() {
     </p>
   </div>
 </div>
-
+ <FounderSection/>
         <div className="py-12 sm:py-16 px-4 sm:px-6 xl:px-5 container mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             <div className="space-y-8">

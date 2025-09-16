@@ -20,8 +20,6 @@ export default function Navbar() {
       setSelectedService(pathname);
     }
   }, [pathname]);
-
-  // ✅ Scroll listener for background change
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 20);
     window.addEventListener("scroll", handleScroll);
@@ -124,7 +122,7 @@ export default function Navbar() {
             <Link href="/blogs" className="hover:text-[#5a2e1e]">
               Blogs
             </Link>
-            <Link href="/contact" className="hover:text-[#5a2e1e]">
+            <Link href="/Contact" className="hover:text-[#5a2e1e]">
               Contact
             </Link>
           </nav>

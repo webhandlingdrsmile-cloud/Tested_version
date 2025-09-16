@@ -47,7 +47,7 @@ export default function Schedule() {
             printing and typesetting industry.
           </motion.p>
           <motion.button
-            className="mt-6 px-6 sm:px-8 py-3 bg-[#8B3D3D] text-white text-sm sm:text-base md:text-lg rounded-md shadow-md hover:bg-[#732f2f] transition"
+            className="mt-6 px-6 sm:px-8 py-3 bg-[#8B3D3D] text-white text-sm sm:text-base md:text-lg  shadow-md hover:bg-[#732f2f] transition"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             transition={{ type: "spring", stiffness: 300 }}

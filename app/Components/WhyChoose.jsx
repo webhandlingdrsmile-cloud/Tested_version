@@ -9,7 +9,7 @@ export default function WhyChooseUs() {
       className="bg-[#3c2d25] text-white py-16 px-6 sm:px-10 lg:px-20 overflow-hidden"
       aria-labelledby="why-choose-us-heading"
     >
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-stretch">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-stretch">
         <motion.div
           className="flex flex-col justify-center"
           initial={{ x: -80, opacity: 0 }}
@@ -52,7 +52,7 @@ export default function WhyChooseUs() {
             <img
               src="./Images/W1.png"
               alt="Smiling female dentist in a lab coat at Dr Smile"
-              className="w-56 sm:w-72 lg:w-80 xl:w-96 object-contain"
+              className="w-56 sm:w-72 lg:w-80 xl:w-96 object-contain md:hidden xl:inline"
               loading="lazy"
             />
           </motion.div>
