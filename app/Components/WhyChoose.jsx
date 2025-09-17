@@ -2,6 +2,7 @@
 
 import { PhoneCall, Smile, UserCheck } from "lucide-react";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 export default function WhyChooseUs() {
   return (
@@ -31,15 +32,18 @@ export default function WhyChooseUs() {
             technology and personalized attention, ensuring every patient enjoys
             healthy, beautiful, and confident smiles with lasting results.
           </p>
-          <motion.a
-            href="/contact"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="inline-block mt-6 px-6 py-3 w-40 bg-white text-[#3c2d25] font-semibold  shadow hover:bg-gray-100 transition"
-            aria-label="Contact Dr Smile for expert dental care"
-          >
-            Contact Us
-          </motion.a>
+          <motion.div
+        whileHover={{ scale: 1.05 }}
+        whileTap={{ scale: 0.95 }}
+        className="w-full sm:w-auto"
+      >
+        <Link
+          href="#appointment"
+          className="block bg-white text-black xl:mt-4 px-6 py-3 font-medium shadow-md transition text-center w-40"
+        >
+        Contact Us
+        </Link>
+      </motion.div>
         </motion.div>
         <div className="flex flex-col lg:flex-row items-stretch gap-10">
           <motion.div

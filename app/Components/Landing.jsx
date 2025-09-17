@@ -1,5 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 export default function Landing() {
   return (
@@ -37,12 +38,12 @@ export default function Landing() {
         </p>
 
         <div className="flex flex-col sm:flex-row items-center gap-4">
-          <a
+          <Link
             href="#appointment"
             className="w-full sm:w-auto bg-[#704532] hover:bg-[#704532] text-white px-6 py-3  font-medium shadow-md transition text-center"
           >
             Book Appointment
-          </a>
+          </Link>
           <a
             href="tel:+918296099118"
             className="w-full sm:w-auto flex items-center justify-center border border-white/40 px-5 py-3  text-sm hover:bg-white/10 transition"

@@ -113,13 +113,13 @@ export default function Navbar() {
               </AnimatePresence>
             </div>
 
-            <Link href="/teams" className="hover:text-[#5a2e1e]">
+            <Link href="/Teams" className="hover:text-[#5a2e1e]">
               Our Teams
             </Link>
-            <Link href="/gallery" className="hover:text-[#5a2e1e]">
+            <Link href="/Gallery" className="hover:text-[#5a2e1e]">
               Gallery
             </Link>
-            <Link href="/blogs" className="hover:text-[#5a2e1e]">
+            <Link href="/Blogs" className="hover:text-[#5a2e1e]">
               Blogs
             </Link>
             <Link href="/Contact" className="hover:text-[#5a2e1e]">

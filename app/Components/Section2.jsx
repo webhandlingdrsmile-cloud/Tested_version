@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 export default function Section2() {
   const container = {
@@ -100,15 +101,18 @@ export default function Section2() {
             ensuring healthy, confident smiles for the whole family in a
             comfortable, trusted environment.
           </p>
-     <motion.a
-  href="/about"
-  aria-label="Learn more about our dental experts"
-  whileHover={{ scale: 1.05 }}
-  whileTap={{ scale: 0.95 }}
-  className="inline-block bg-[#704532] hover:bg-[#422014] w-40 md:w-50 text-center text-white px-4 py-5  text-sm transition"
->
-  Meet Us
-</motion.a>
+          <motion.div
+        whileHover={{ scale: 1.05 }}
+        whileTap={{ scale: 0.95 }}
+        className="w-full sm:w-auto"
+      >
+        <Link
+          href="#appointment"
+          className="block bg-[#704532] hover:bg-[#422014] text-white px-6 py-3 font-medium shadow-md transition text-center w-40"
+        >
+          Meet Us
+        </Link>
+      </motion.div>
 
         </motion.div>
       </motion.div>

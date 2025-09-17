@@ -2,6 +2,7 @@
 
 import { Play, Heart, Shield } from "lucide-react";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 export default function Experience() {
 
@@ -118,16 +119,18 @@ export default function Experience() {
             </motion.article>
           </motion.div>
           <motion.div variants={fadeInUp} className="pt-6">
-            <motion.a
-              href="/about"
-              aria-label="Learn more about Dr Smile Dental Clinic"
-              className="inline-flex items-center gap-2 bg-[#5a2e1e] hover:bg-[#422014] text-white px-5 py-3  transition"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              About More
-              <Play className="w-4 h-4" aria-hidden="true" />
-            </motion.a>
+          <motion.div
+        whileHover={{ scale: 1.05 }}
+        whileTap={{ scale: 0.95 }}
+        className="w-full sm:w-auto"
+      >
+        <Link
+          href="#appointment"
+          className="block bg-[#704532] hover:bg-[#422014] text-white px-6 py-3 font-medium shadow-md transition text-center w-40"
+        >
+        About More
+        </Link>
+      </motion.div>
           </motion.div>
         </div>
       </motion.article>

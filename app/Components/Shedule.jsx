@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 export default function Schedule() {
   return (
@@ -14,7 +15,7 @@ export default function Schedule() {
       <div className="absolute inset-0 bg-black/20" /> 
       <div className="relative z-10 flex items-center justify-center w-full">
         <motion.div
-          className="bg-white/80 backdrop-blur-md w-full max-w-4xl text-center p-6 sm:p-8 md:p-10 lg:p-12 rounded-lg shadow-xl"
+          className="bg-white/80 backdrop-blur-md w-full max-w-4xl text-center p-6 sm:p-8 md:p-10 lg:p-12  shadow-xl"
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
@@ -36,7 +37,7 @@ export default function Schedule() {
             Today At Dr Smile
           </motion.h1>
           <motion.p
-            className="mt-4 text-gray-700 text-sm sm:text-base md:text-lg leading-relaxed max-w-3xl mx-auto"
+            className="mt-4 text-gray-700 text-xs sm:text-xs md:text-lg leading-relaxed max-w-3xl mx-auto"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.6, duration: 0.6 }}
@@ -46,14 +47,18 @@ export default function Schedule() {
             ever since the 1500s. Lorem Ipsum is simply dummy text of the
             printing and typesetting industry.
           </motion.p>
-          <motion.button
-            className="mt-6 px-6 sm:px-8 py-3 bg-[#8B3D3D] text-white text-sm sm:text-base md:text-lg  shadow-md hover:bg-[#732f2f] transition"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            transition={{ type: "spring", stiffness: 300 }}
-          >
-            Schedule Now
-          </motion.button>
+            <motion.div
+        whileHover={{ scale: 1.05 }}
+        whileTap={{ scale: 0.95 }}
+        className="w-full sm:w-auto mx-auto"
+      >
+        <Link
+          href="#appointment"
+          className="block bg-[#704532] hover:bg-[#422014] text-white px-6 py-3 font-medium shadow-md transition text-center w-40 mx-auto mt-5"
+        >
+        Shedule Now
+        </Link>
+      </motion.div>
         </motion.div>
       </div>
     </section>
