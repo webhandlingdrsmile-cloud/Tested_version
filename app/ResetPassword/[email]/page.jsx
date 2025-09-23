@@ -7,7 +7,11 @@ import { ArrowRight, Eye, EyeOff, KeyRound, MailCheck } from 'lucide-react';
 
 export default function ResetPasswordPage() {
   const router = useRouter();
-  const { email } = useParams(); 
+  
+  const { email } = useParams();
+  const decodedEmail = decodeURIComponent(email); 
+  console.log(decodedEmail);
+  
 
   const [otp, setOtp] = useState('');
   const [newPassword, setNewPassword] = useState('');
@@ -30,7 +34,7 @@ export default function ResetPasswordPage() {
 
     try {
       const response = await axios.post('/api/Resetpassword', {
-        email,
+        email:decodedEmail,
         otp: parseInt(otp, 10),
         newPassword,
       });

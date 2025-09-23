@@ -7,10 +7,10 @@ export async function POST(req) {
   try {
     const { email, otp, newPassword } = await req.json();
 
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!email || !emailRegex.test(email)) {
-      return NextResponse.json({ message: 'Invalid email format' }, { status: 400 });
-    }
+    // const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    // if (!email || !emailRegex.test(email)) {
+    //   return NextResponse.json({ message: 'Invalid email format' }, { status: 400 });
+    // }
 
     if (!otp || typeof otp !== 'number' || otp < 100000 || otp > 999999) {
       return NextResponse.json({ message: 'Invalid OTP' }, { status: 400 });
