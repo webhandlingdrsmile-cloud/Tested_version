@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 
 export default function FounderSection() {
   return (
@@ -33,9 +34,9 @@ export default function FounderSection() {
             Printing And Typesetting Industry. Lorem Ipsum Has Been The
             Industry's Standard Dummy Text Ever Since The 1500s.
           </p>
-          <button className="mt-6 bg-[#5B3629] text-white px-6 py-3 shadow hover:bg-[#40241a] transition">
+        <Link href={`/Booking`}>  <button className="mt-6 bg-[#704532] text-white px-6 py-3 shadow hover:bg-[#40241a] transition">
             Schedule Now
-          </button>
+          </button></Link>
         </div>
       </div>
     </section>
