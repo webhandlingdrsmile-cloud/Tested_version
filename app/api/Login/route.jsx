@@ -1,14 +1,13 @@
 import { NextResponse } from 'next/server'
+import { cookies as nextCookies } from 'next/headers'
 import { dbConnect } from '../../../Lib/connection'
 import User from '../../../Modeles/Usermodel'
 import bcrypt from 'bcrypt'
 import jwt from 'jsonwebtoken'
-import { serialize } from 'cookie'
-import { cookies } from 'next/headers'
 
 export const dynamic = 'force-dynamic'
-
 const JWT_SECRET = process.env.JWT_SECRET
+
 
 export async function POST(req) {
   try {
@@ -40,23 +39,19 @@ export async function POST(req) {
       { expiresIn: '1d' }
     )
 
-    
-    const cookie = serialize('token', token, {
+    const res = NextResponse.json({
+      message: 'Login successful',
+      user: { employeeID: user.employeeID },
+    }, { status: 200 })
+
+    res.cookies.set('token', token, {
       httpOnly: true,
       secure: process.env.NODE_ENV === 'production',
       sameSite: 'strict',
-      maxAge: 60 * 60 * 24,
+      maxAge: 60 * 60 * 24, 
       path: '/',
     })
 
-    const res = NextResponse.json({
-      message: 'Login successful',
-      user: {
-        employeeID: user.employeeID,
-      },
-    }, { status: 200 })
-
-    res.headers.set('Set-Cookie', cookie)
     return res
 
   } catch (error) {
@@ -66,30 +61,33 @@ export async function POST(req) {
 }
 
 export async function GET() {
-  const token = cookies().get('token')?.value
-
-  if (!token) {
-    return NextResponse.json({ message: 'Unauthorized' }, { status: 401 })
-  }
-
   try {
+    const cookieStore = await nextCookies() 
+    const token = cookieStore.get('token')?.value
+
+    if (!token) {
+      return NextResponse.json({ message: 'Unauthorized' }, { status: 401 })
+    }
+
     const decoded = jwt.verify(token, JWT_SECRET)
     return NextResponse.json({ message: 'Token verified', user: decoded }, { status: 200 })
+
   } catch (err) {
-    return NextResponse.json({ message: 'Invalid or expired token' }, { status: 403 })
+    return NextResponse.json({ message: 'Invalid or expired token', error: err.message }, { status: 403 })
   }
 }
 
+
 export async function DELETE() {
-  const expiredCookie = serialize('token', '', {
+  const res = NextResponse.json({ message: 'Logged out successfully' }, { status: 200 })
+
+  res.cookies.set('token', '', {
     httpOnly: true,
     secure: process.env.NODE_ENV === 'production',
     sameSite: 'strict',
     path: '/',
-    maxAge: 0,
+    maxAge: 0, 
   })
 
-  const res = NextResponse.json({ message: 'Logged out successfully' }, { status: 200 })
-  res.headers.set('Set-Cookie', expiredCookie)
   return res
 }

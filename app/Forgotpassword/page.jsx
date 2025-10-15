@@ -38,7 +38,7 @@ export default function ForgotPasswordPage() {
     alt="Dental Clinic"
     className="w-full h-full object-cover opacity-70"
   />
-  <div className="absolute inset-0 bg-[#1F4750] flex flex-col items-center justify-center opacity-80 text-white text-center p-8">
+  <div className="absolute inset-0 bg-[#704532] flex flex-col items-center justify-center opacity-80 text-white text-center p-8">
     <h1 className="text-3xl font-semibold mb-2">Dr.Smile</h1>
     <p className="text-lg">Creating smiles that last a lifetime.</p>
   </div>
@@ -70,7 +70,7 @@ export default function ForgotPasswordPage() {
             <button
               type="submit"
               disabled={loading}
-              className="w-full bg-[#1F4750] hover:bg-teal-800 text-white py-3 rounded-md font-medium transition-all"
+              className="w-full bg-[#704532]  text-white py-3 rounded-md font-medium transition-all"
             >
               {loading ? 'Sending OTP...' : 'Send OTP →'}
             </button>

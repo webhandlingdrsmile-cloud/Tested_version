@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { useParams, useRouter } from 'next/navigation';
 import axios from 'axios';
 import { ArrowRight, Eye, EyeOff, KeyRound, MailCheck } from 'lucide-react';
+import { FaKey } from "react-icons/fa";
 
 export default function ResetPasswordPage() {
   const router = useRouter();
@@ -58,7 +59,7 @@ export default function ResetPasswordPage() {
           alt="Dental Clinic"
           className="w-full h-full object-cover opacity-70"
         />
-        <div className="absolute inset-0 bg-[#1F4750] flex flex-col items-center opacity-80 justify-center text-white text-center p-8">
+        <div className="absolute inset-0 bg-[#704532] flex flex-col items-center opacity-80 justify-center text-white text-center p-8">
           <h1 className="text-3xl font-semibold mb-2">Dr.Smile</h1>
           <p className="text-lg">Creating smiles that last a lifetime.</p>
         </div>
@@ -74,12 +75,12 @@ export default function ResetPasswordPage() {
             <div>
               <label className="block mb-1 font-medium text-sm">OTP</label>
               <div className="flex items-center border rounded px-3 py-3">
-                <MailCheck className="w-4 h-4 text-gray-500 mr-2" />
+                <FaKey className="w-4 h-4 text-gray-500 mr-2" />
                 <input
-                  type="text"
+                  type="number"
                   value={otp}
                   onChange={(e) => setOtp(e.target.value)}
-                  className="w-full outline-none text-sm"
+                  className="w-full outline-none text-sm "
                   placeholder="Enter the OTP received..."
                   required
                 />
@@ -129,7 +130,7 @@ export default function ResetPasswordPage() {
             <button
               type="submit"
               disabled={loading}
-              className="w-full bg-[#1F4750] hover:bg-teal-900 text-white py-3 rounded font-semibold flex items-center justify-center gap-1 transition"
+              className="w-full bg-[#704532] text-white py-3 rounded font-semibold flex items-center justify-center gap-1 transition"
             >
               {loading ? 'Submitting...' : <>Confirm <ArrowRight className="w-4 h-4" /></>}
             </button>

@@ -39,7 +39,7 @@ export default function Landing() {
 
         <div className="flex flex-col sm:flex-row items-center gap-4">
           <Link
-            href="#appointment"
+            href="/Booking"
             className="w-full sm:w-auto bg-[#704532] hover:bg-[#704532] text-white px-6 py-3  font-medium shadow-md transition text-center"
           >
             Book Appointment

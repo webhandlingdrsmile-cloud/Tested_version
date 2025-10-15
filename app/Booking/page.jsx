@@ -22,9 +22,7 @@ export default function QuickAppointment() {
     '01:00 PM', '01:30 PM', '02:00 PM', '02:30 PM',
     '03:00 PM', '03:30 PM', '04:00 PM', '04:30 PM',
     '05:00 PM', '05:30 PM', '06:00 PM', '06:30 PM',
-    '07:00 PM', '07:30 PM', '08:00 PM', '08:30 PM',
-    '09:00 PM', '09:30 PM', '10:00 PM', '10:30 PM',
-    '11:00 PM', '11:30 PM'
+    '07:00 PM', '07:30 PM', '08:00 PM'
   ];
 
   const handleChange = (e) => {
@@ -74,7 +72,7 @@ export default function QuickAppointment() {
     backgroundPosition: "center"
   }}
 >
-  <div className="absolute inset-0 bg-[#0d3b36]/80"></div>
+  <div className="absolute inset-0 bg-[#704532]/80"></div>
   <div className="relative space-y-8">
     <Link href={`/`}>
       <button className="text-white text-xl mb-6">←</button>
@@ -99,7 +97,7 @@ export default function QuickAppointment() {
     </p>
     <div className="flex items-center gap-3">
       <img
-        src="/dentist.jpg"
+        src="/Images/AB3.png"
         alt="Ramisa Sajana"
         className="w-10 h-10 rounded-full border-2 border-white"
       />
@@ -143,7 +141,7 @@ export default function QuickAppointment() {
             <input type="date" name="date" value={formData.date} onChange={handleChange} className="border p-3 rounded-md w-full" required />
           </div>
 
-          <button type="submit" className="bg-[#164e43] text-white px-6 py-3 rounded-md hover:bg-[#0d3b36] transition w-full sm:w-auto">
+          <button type="submit" className="bg-[#704532] text-white px-6 py-3 rounded-md hover:bg-[#704532] transition w-full sm:w-auto">
             Book Appointment →
           </button>
         </form>
