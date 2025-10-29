@@ -47,7 +47,7 @@ export default function WhyChooseUs() {
         </motion.div>
         <div className="flex flex-col lg:flex-row items-stretch gap-10">
           <motion.div
-            className="flex justify-center lg:flex-shrink-0"
+            className="flex justify-start lg:flex-shrink-0"
             initial={{ scale: 0.8, opacity: 0 }}
             whileInView={{ scale: 1, opacity: 1 }}
             transition={{ duration: 0.8, ease: "easeOut" }}

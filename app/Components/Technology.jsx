@@ -34,7 +34,7 @@ export default function Technology() {
       }}
     >
       <div className="absolute inset-0 bg-black/30" aria-hidden="true"></div>
-      <div className="relative z-10 px-6 md:px-16 lg:px-24">
+      <div className="relative z-10 px-6 md:px-7 xl:px-24">
         <motion.header
           className="text-center mb-12"
           initial={{ opacity: 0, y: 30 }}
@@ -69,8 +69,8 @@ export default function Technology() {
                 <figcaption className="sr-only">{tech.title}</figcaption>
               </figure>
               <div className="p-4">
-                <h3 className="text-lg font-semibold">{tech.title}</h3>
-                <p className="text-sm text-gray-300 mt-2">{tech.desc}</p>
+                <h3 className="text-sm lg:text-lg font-semibold">{tech.title}</h3>
+                <p className="text-[12px] text-gray-300 mt-2">{tech.desc}</p>
               </div>
             </motion.article>
           ))}
