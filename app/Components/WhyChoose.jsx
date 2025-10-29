@@ -2,22 +2,48 @@
 
 import { PhoneCall, Smile, UserCheck } from "lucide-react";
 import { motion } from "framer-motion";
-import Link from "next/link";
+import Image from "next/image";
 
 export default function WhyChooseUs() {
+  const features = [
+    {
+      icon: <PhoneCall className="text-[#3c2d25] w-6 h-6" />,
+      title: "Emergency Services",
+      desc: "Quick, reliable dental emergency care ensuring comfort and healthy smiles.",
+    },
+    {
+      icon: <Smile className="text-[#3c2d25] w-6 h-6" />,
+      title: "Positive Patient Reviews",
+      desc: "Patients praise Dr Smile for compassionate, expert, and reliable care.",
+    },
+    {
+      icon: <UserCheck className="text-[#3c2d25] w-6 h-6" />,
+      title: "Experienced Professionals",
+      desc: "Skilled dental experts delivering precise, safe, and confident smile care.",
+    },
+  ];
+
+  const container = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: { staggerChildren: 0.3, delayChildren: 0.2 },
+    },
+  };
+
+  const fadeIn = {
+    hidden: { opacity: 0, x: 50 },
+    visible: { opacity: 1, x: 0, transition: { duration: 0.6 } },
+  };
+
   return (
     <section
       className="bg-[#3c2d25] text-white py-16 px-6 sm:px-10 lg:px-20 overflow-hidden"
       aria-labelledby="why-choose-us-heading"
     >
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-stretch">
-        <motion.div
-          className="flex flex-col justify-center"
-          initial={{ x: -80, opacity: 0 }}
-          whileInView={{ x: 0, opacity: 1 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-          viewport={{ once: true }}
-        >
+      <div className=" mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 items-center">
+        {/* Text Section */}
+        <div>
           <h4 className="uppercase text-sm font-semibold tracking-wider text-gray-300">
             Why Choose Us
           </h4>
@@ -32,78 +58,47 @@ export default function WhyChooseUs() {
             technology and personalized attention, ensuring every patient enjoys
             healthy, beautiful, and confident smiles with lasting results.
           </p>
-          <motion.div
-        whileHover={{ scale: 1.05 }}
-        whileTap={{ scale: 0.95 }}
-        className="w-full sm:w-auto"
-      >
-        <Link
-          href="#appointment"
-          className="block bg-white text-black xl:mt-4 px-6 py-3 font-medium shadow-md transition text-center w-40"
-        >
-        Contact Us
-        </Link>
-      </motion.div>
-        </motion.div>
-        <div className="flex flex-col lg:flex-row items-stretch gap-10">
-          <motion.div
-            className="flex justify-start lg:flex-shrink-0"
-            initial={{ scale: 0.8, opacity: 0 }}
-            whileInView={{ scale: 1, opacity: 1 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
-            viewport={{ once: true }}
-          >
-            <img
-              src="./Images/W1.png"
-              alt="Smiling female dentist in a lab coat at Dr Smile"
-              className="w-56 sm:w-72 lg:w-80 xl:w-96 object-contain md:hidden xl:inline"
-              loading="lazy"
-            />
-          </motion.div>
-
-          <motion.div
-            className="flex flex-col justify-center space-y-8 w-full max-w-sm"
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            variants={{
-              hidden: { opacity: 0, x: 50 },
-              visible: {
-                opacity: 1,
-                x: 0,
-                transition: { staggerChildren: 0.3, duration: 0.6 },
-              },
-            }}
-          >
-            {[{
-              icon: <PhoneCall className="text-[#3c2d25] w-6 h-6" />,
-              title: "Emergency Services",
-              desc: "Quick, reliable dental emergency care ensuring comfort and healthy smiles.",
-            },{
-              icon: <Smile className="text-[#3c2d25] w-6 h-6" />,
-              title: "Positive Patient Reviews",
-              desc: "Patients praise Dr Smile for compassionate, expert, and reliable care.",
-            },{
-              icon: <UserCheck className="text-[#3c2d25] w-6 h-6" />,
-              title: "Experienced Professionals",
-              desc: "Skilled dental experts delivering precise, safe, and confident smile care.",
-            }].map((feature, index) => (
-              <motion.div
-                key={index}
-                className="flex items-start gap-4"
-                variants={{ hidden: { opacity: 0, x: 50 }, visible: { opacity: 1, x: 0 } }}
-              >
-                <div className="bg-white p-3 rounded-lg shadow">{feature.icon}</div>
-                <div>
-                  <h3 className="font-semibold text-lg">{feature.title}</h3>
-                  <p className="text-gray-300 text-sm sm:text-base leading-relaxed">
-                    {feature.desc}
-                  </p>
-                </div>
-              </motion.div>
-            ))}
-          </motion.div>
         </div>
+
+        {/* Image Section */}
+        <div className="flex justify-center">
+          <div className="relative w-[260px] sm:w-[320px] lg:w-[300px] xl:w-[360px] aspect-[3/4]">
+            <Image
+              src="/Images/W1.png"
+              alt="Smiling female dentist in a lab coat at Dr Smile"
+              fill
+              className="object-contain"
+              priority={false}
+            />
+          </div>
+        </div>
+
+        {/* Features Section */}
+        <motion.div
+          className="flex flex-col justify-center space-y-8"
+          variants={container}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+        >
+          {features.map((feature, index) => (
+            <motion.div
+              key={index}
+              className="flex items-start gap-4"
+              variants={fadeIn}
+            >
+              <div className="bg-white p-3 rounded-lg shadow flex-shrink-0">
+                {feature.icon}
+              </div>
+              <div>
+                <h3 className="font-semibold text-lg">{feature.title}</h3>
+                <p className="text-gray-300 text-sm sm:text-base leading-relaxed">
+                  {feature.desc}
+                </p>
+              </div>
+            </motion.div>
+          ))}
+        </motion.div>
       </div>
     </section>
   );
