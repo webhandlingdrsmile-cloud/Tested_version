@@ -205,7 +205,7 @@ export default function ContactPage() {
               ></textarea>
               <button
                 type="submit"
-                className="bg-[#0d3b36] text-white py-3 px-6 rounded hover:bg-[#0b2e2a] transition text-sm sm:text-base w-full sm:w-auto"
+                className="bg-[#704532] text-white py-3 px-6 rounded hover:bg-[#704532] transition text-sm sm:text-base w-full sm:w-auto"
               >
                 Submit Require &gt;
               </button>

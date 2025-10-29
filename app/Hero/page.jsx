@@ -16,7 +16,7 @@ export default function Hero(){
     return(
         <div className="overflow-x-hidden">
             <Landing/>
-            <Section2/>
+            {/* <Section2/> */}
             <Experience/>
             <Technology/>
             <Expertise/>

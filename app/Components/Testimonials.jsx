@@ -31,7 +31,7 @@ export default function Testimonials() {
     },
   ];
 
-  const testimonialsPerPage = 4;
+  const testimonialsPerPage = 3;
   const totalPages = Math.ceil(testimonials.length / testimonialsPerPage);
 
   const [currentPage, setCurrentPage] = useState(0);
@@ -60,14 +60,14 @@ export default function Testimonials() {
           What Our <span className="text-[#3D2A24]">Clients Say</span>
         </h3>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mx-auto transition-all duration-700 ease-in-out">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mx-auto transition-all duration-700 ease-in-out">
         {currentTestimonials.map((t, index) => (
           <div
             key={index}
             className="bg-transparent p-6 rounded-lg text-left flex flex-col items-start"
           >
             <Quote className="w-10 h-10 text-[#3D2A24] mb-4" />
-            <p className="text-gray-700 text-sm md:text-sm leading-relaxed mb-4">
+            <p className="text-gray-700 text-sm md:text-lg leading-relaxed mb-4">
               {t.text}
             </p>
             <h4 className="font-semibold text-[#3D2A24]">{t.name}</h4>
