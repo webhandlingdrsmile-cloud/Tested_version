@@ -34,7 +34,7 @@ export default function Landing() {
       </Head>
 
       <header
-        className="relative w-full  h-screen xl:h-[65vh] flex items-center justify-center sm:justify-start overflow-hidden"
+        className="relative w-full  h-screen xl:h-[85vh] flex items-center justify-center sm:justify-start overflow-hidden"
         role="banner"
       >
         <video
