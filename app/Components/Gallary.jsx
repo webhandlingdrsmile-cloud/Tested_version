@@ -15,7 +15,7 @@ export default function Gallery() {
   return (
     <div className="min-h-full bg-[#E1D5C9] relative px-4 sm:px-6 md:px-8 lg:px-10 py-8 sm:py-10 lg:py-12">
      <div className="relative grid grid-cols-1 lg:grid-cols-2  lg:gap-10 items-center py-6 sm:py-8 lg:py-10">
-  {/* Left: Heading */}
+
   <div className="space-y-4 sm:space-y-5">
     <p className="font-extrabold text-sm sm:text-base text-[#704532] uppercase tracking-wide">
       Our Gallery
@@ -37,14 +37,14 @@ export default function Gallery() {
 </div>
 
 
-      <div className="flex flex-col lg:flex-row gap-6">
-        <div className="flex-1 relative aspect-[3/4] overflow-hidden ">
+      <div className="flex flex-col lg:flex-row gap-6 ">
+        <div className="flex-1 relative aspect-[3/2] overflow-hidden ">
           <Image
-            src="/Images/G1.png"
+            src="/Images/DR.png"
             alt="Gallery main image"
             fill
-            className="object-cover hover:scale-105 transition-transform duration-500"
-            sizes="(max-width: 1024px) 50vw, 20vw"
+            className="object-cover hover:scale-105 transition-transform duration-500 "
+            sizes="(max-width: 1024px) 100vw, 40vw"
           />
         </div>
         <div className="flex-[2] grid grid-cols-2 sm:grid-cols-3 gap-4">
@@ -58,7 +58,7 @@ export default function Gallery() {
                 alt={`Gallery image ${index + 1}`}
                 fill
                 className="object-cover hover:scale-110 transition-transform duration-500"
-                sizes="(max-width: 1024px) 22vw, 10vw"
+                sizes="(max-width: 1024px) 33vw, 20vw"
               />
             </div>
           ))}
