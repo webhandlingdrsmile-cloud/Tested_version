@@ -41,7 +41,7 @@ export default function WhyChooseUs() {
       className="bg-[#3c2d25] text-white py-16 px-6 sm:px-10 lg:px-20 overflow-hidden"
       aria-labelledby="why-choose-us-heading"
     >
-      <div className=" mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 items-center">
+      <div className=" mx-auto grid grid-cols-1 xl:grid-cols-3 gap-12 items-center">
         {/* Text Section */}
         <div>
           <h4 className="uppercase text-sm font-semibold tracking-wider text-gray-300">
