@@ -13,7 +13,7 @@ export default function Expertise() {
             </h4>
             <h2
               id="expertise-heading"
-              className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 leading-tight"
+              className="text-xl sm:text-2xl md:text-3xl lg:text-[27px] xl:text-[36px] font-bold text-gray-900 leading-tight"
             >
               Trusted dental expertise delivering healthy, confident smiles daily.
             </h2>

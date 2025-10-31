@@ -64,7 +64,7 @@ export default function Experience() {
 
           <motion.h2
             variants={fadeInUp}
-            className="text-xl md:text-2xl md:text-4xl lg:text-xl  xl:text-4xl font-bold leading-snug mb-4"
+            className="text-xl md:text-2xl md:text-4xl lg:text-xl  xl:text-[36px] font-bold leading-snug mb-4"
           >
             Your Journey to a Confident{" "}
             <br className="hidden sm:block" /> Smile Starts Here

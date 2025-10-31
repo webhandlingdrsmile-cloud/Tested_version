@@ -13,17 +13,17 @@ export default function AboutStory() {
           />
         </div>
         <div className="text-center md:text-left">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold text-gray-900 mb-4">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[32px] font-semibold text-gray-900 mb-4">
             Our Story
           </h2>
 
-          <p className="text-xs sm:text-xs md:text-sm text-gray-700 xl:text-lg text-start leading-relaxed mb-4 max-w-2xl">
+          <p className="text-xs sm:text-xs md:text-sm text-gray-700 xl:text-[17px] text-start leading-relaxed mb-4 max-w-2xl">
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industry's standard dummy text
             ever since the 1500s. Lorem Ipsum has been.
           </p>
 
-          <p className="text-xs sm:text-xs md:text-sm xl:text-lg text-gray-700 text-start leading-relaxed mb-6 max-w-2xl">
+          <p className="text-xs sm:text-xs md:text-sm xl:text-[17px] text-gray-700 text-start leading-relaxed mb-6 max-w-2xl">
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industry's standard dummy text
             ever since the 1500s. Lorem Ipsum is simply dummy text of the
