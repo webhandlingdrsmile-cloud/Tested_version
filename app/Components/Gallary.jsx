@@ -13,25 +13,24 @@ export default function Gallery() {
   ];
 
   return (
-    <div className="min-h-full bg-[#E1D5C9] relative px-4 sm:px-6 md:px-8 lg:px-10 py-8 sm:py-10 lg:py-12">
+    <div className="min-h-full bg-[#E1D5C9] relative px-4 sm:px-6 md:px-8 lg:px-18 py-8 sm:py-10 lg:py-12">
      <div className="relative grid grid-cols-1 lg:grid-cols-2  lg:gap-10 items-center py-6 sm:py-8 lg:py-10">
 
   <div className="space-y-4 sm:space-y-5">
     <p className="font-extrabold text-sm sm:text-base text-[#704532] uppercase tracking-wide">
       Our Gallery
     </p>
-    <h1 className="text-2xl sm:text-3xl lg:text-4xl xl:text-[36px] font-semibold text-[#2E2E2E] leading-tight sm:leading-snug">
+    <h1 className="text-2xl sm:text-3xl lg:text-4xl xl:text-[36px] font-bold text-[#2E2E2E] leading-tight sm:leading-snug">
       Visual Journey of our <br />
-      <span className="text-[#704532] font-bold">Dental Expertise</span>
+      <span className="text-black font-thin">Dental Expertise</span>
     </h1>
   </div>
 
-  {/* Right: Paragraph */}
   <div className="max-w-sm lg:max-w-md xl:max-w-lg w-full lg:absolute lg:right-10 mt-4 lg:mt-0">
     <p className="text-[#4A4A4A] text-xs sm:text-xs lg:text-sm leading-relaxed">
-      Lorem Ipsum is simply dummy text of the printing and typesetting
-      industry. Lorem Ipsum has been the industry's standard dummy text
-      ever since the 1500s.
+Explore Dr Smile’s gallery showcasing our dedication to exceptional dental care. Witness smile transformations, 
+advanced treatments, and happy patients,
+ reflecting our commitment to precision, comfort, and confident, healthy smiles.
     </p>
   </div>
 </div>

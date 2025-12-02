@@ -37,11 +37,11 @@ export default function WhyChooseUs() {
   };
 
   return (
-    <section
-      className="bg-[#3c2d25] text-white py-16 px-6 sm:px-10 lg:px-20 overflow-hidden"
-      aria-labelledby="why-choose-us-heading"
-    >
-      <div className=" mx-auto grid grid-cols-1 xl:grid-cols-3 gap-12 items-center">
+<section
+  className="bg-[url('/Images/BGw.png')] bg-cover bg-center text-white px-6 sm:px-10 lg:px-18 overflow-hidden pt-16 pb-8 xl:pb-0"
+>
+
+      <div className=" mx-auto grid grid-cols-1 xl:grid-cols-3 gap-x-12 items-center">
         {/* Text Section */}
         <div>
           <h4 className="uppercase text-sm font-semibold tracking-wider text-gray-300">

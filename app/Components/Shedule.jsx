@@ -21,7 +21,7 @@ export default function Schedule() {
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
           <motion.h2
-            className="text-sm md:text-2xl lg:text-[30px] font-extrabold text-gray-800"
+            className="text-sm md:text-2xl lg:text-[30px] font-bold text-black"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 0.6 }}
@@ -29,7 +29,7 @@ export default function Schedule() {
             Book Your Trusted Dental Implant Consultation
           </motion.h2>
           <motion.h1
-            className="text-sm md:text-2xl lg:text-[30px] font-light text-gray-900 mt-2"
+            className="text-sm md:text-2xl lg:text-[30px] font-thin text-gray-900 mt-2"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4, duration: 0.6 }}
@@ -37,15 +37,16 @@ export default function Schedule() {
             Today At Dr Smile
           </motion.h1>
           <motion.p
-            className="mt-4 text-gray-700 text-xs sm:text-xs md:text-sm  leading-relaxed max-w-3xl mx-auto"
+            className="mt-4 text-black font-bold text-xs sm:text-xs md:text-sm  leading-relaxed max-w-3xl mx-auto"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.6, duration: 0.6 }}
           >
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry’s standard dummy text
-            ever since the 1500s. Lorem Ipsum is simply dummy text of the
-            printing and typesetting industry.
+           Dr Smile Dental Clinic is your trusted destination for modern,
+           gentle, and personalized dental care. With a team of experienced 
+           professionals, advanced technology, and a
+            patient-first approach, we ensure every visit is comfortable, 
+            reassuring, and tailored to your individual needs.
           </motion.p>
             <motion.div
         whileHover={{ scale: 1.05 }}

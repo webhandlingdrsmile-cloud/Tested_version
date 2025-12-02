@@ -1,6 +1,6 @@
 "use client";
 
-import { CheckSquare } from "lucide-react";
+import { FaCheckSquare } from "react-icons/fa";
 import Image from "next/image";
 export default function Expertise() {
   return (
@@ -8,33 +8,34 @@ export default function Expertise() {
       <div className="grid grid-cols-1 lg:grid-cols-2 min-h-[400px] lg:min-h-[500px]">
         <div className="bg-[#f5e9dd] p-6 sm:p-8 md:p-10 lg:p-12 xl:p-16 flex flex-col justify-center h-full">
           <header className="mb-4 sm:mb-6 md:mb-8">
-            <h4 className="uppercase text-xs font-semibold tracking-wider text-gray-600 mb-2">
+            <h4 className="uppercase text-sm font-extrabold tracking-wider text-[#704532] mb-2">
               Expertise
             </h4>
             <h2
               id="expertise-heading"
-              className="text-xl sm:text-2xl md:text-3xl lg:text-[27px] xl:text-[36px] font-bold text-gray-900 leading-tight"
+              className="text-xl sm:text-2xl md:text-3xl lg:text-[27px] xl:text-[36px] font-extrabold text-gray-900 leading-tight"
             >
-              Trusted dental expertise delivering healthy, confident smiles daily.
+              Trusted dental expertise delivering  <br />
+            <span className="font-thin">  healthy, confident smiles daily.</span>
             </h2>
           </header>
 
-          <p className="text-gray-600 text-sm sm:text-base md:text-lg leading-relaxed mb-4 sm:mb-6 md:mb-8">
+          <p className="text-gray-600 text-sm sm:text-sm md:text-lg leading-relaxed mb-4 sm:mb-6 md:mb-8">
             Dr Smile combines advanced technology and compassionate care to deliver
             precise, safe, and confident smiles for every patient.
           </p>
           
           <div className="space-y-3 sm:space-y-4 md:space-y-6">
             <article className="flex items-start gap-3">
-              <CheckSquare
-                className="text-blue-600 w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 flex-shrink-0 mt-1"
+              <FaCheckSquare
+                className="text-[#2B74FF] w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 xl:w-7 xl:h-7 flex-shrink-0 mt-1"
                 aria-hidden="true"
               />
               <div className="flex-1">
                 <h3 className="font-semibold text-gray-900 text-base sm:text-lg md:text-xl mb-1 md:mb-2">
                   Advanced Technology & Precision
                 </h3>
-                <p className="text-gray-600 text-xs sm:text-sm md:text-base leading-relaxed">
+                <p className="text-gray-600 text-xs sm:text-sm md:text-sm leading-relaxed">
                   Our clinic utilizes cutting-edge dental technology to deliver
                   precise, efficient treatments, ensuring comfort, accuracy, and
                   long-lasting, healthy smiles for every patient.
@@ -43,15 +44,15 @@ export default function Expertise() {
             </article>
             
             <article className="flex items-start gap-3">
-              <CheckSquare
-                className="text-blue-600 w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 flex-shrink-0 mt-1"
+              <FaCheckSquare
+                className="text-[#2B74FF] w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 flex-shrink-0 mt-1"
                 aria-hidden="true"
               />
               <div className="flex-1">
                 <h3 className="font-semibold text-gray-900 text-base sm:text-lg md:text-xl mb-1 md:mb-2">
                   Patient-Centered Care
                 </h3>
-                <p className="text-gray-600 text-xs sm:text-sm md:text-base leading-relaxed">
+                <p className="text-gray-600 text-xs sm:text-sm md:text-sm leading-relaxed">
                   At Dr Smile, every treatment focuses on your comfort, needs, and
                   well-being, ensuring personalized, compassionate care for healthier
                   smiles.

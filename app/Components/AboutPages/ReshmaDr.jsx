@@ -8,7 +8,7 @@ export default function ReshmaDr() {
       className="relative flex items-center justify-center bg-cover bg-center px-6 md:px-10 lg:px-16 xl:px-20 py-16 lg:py-20 min-h-[80vh]"
       style={{ backgroundImage: "url('/Images/AB2.png')" }}
     >
-      {/* Overlay */}
+    
       <div className="absolute inset-0 bg-black/40"></div>
       <div className="relative z-10 flex flex-col-reverse md:flex-row items-center justify-between gap-10 w-full container mx-auto">
         <div className="flex-1 md:flex-[0.6] text-white text-center md:text-left">
@@ -31,7 +31,7 @@ export default function ReshmaDr() {
 
           <a
             href="#"
-            className="inline-block bg-white text-black font-medium px-6 py-3 rounded-md hover:bg-gray-200 transition"
+            className="inline-block bg-white text-black font-medium px-6 py-3 hover:bg-gray-200 transition"
           >
             Our Teams
           </a>

@@ -1,23 +1,24 @@
 'use client'
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 export default function Technology() {
   const technologies = [
     {
-      img: "./Images/T2.png",
+      img: "/Images/T2.png",
       title: "Single – Visit Dentistry",
       desc: "Advanced Single-Visit Dentistry: Quick, Comfortable, Lasting Smiles.",
       alt: "Dentist consulting a patient for single-visit dental treatment"
     },
     {
-      img: "./Images/T3.png",
+      img: "/Images/T3.png",
       title: "Robot – Guided Implant Placement",
       desc: "Precision, Safety, Comfort—Robot-Guided Implants Ensure Perfect Smiles.",
       alt: "Dental implant placement using advanced robot-guided technology"
     },
     {
-      img: "./Images/T4.png",
+      img: "/Images/T4.png",
       title: "No – Shot Laser Fillings",
       desc: "Painless, Precise Laser Fillings For Healthier, Stress-Free Smiles.",
       alt: "Patient receiving painless no-shot laser dental fillings"
@@ -46,9 +47,9 @@ export default function Technology() {
             id="technology-heading"
             className="text-3xl md:text-4xl font-bold"
           >
-            Technology
+           Modern Technology Creating 
           </h2>
-          <p className="text-lg md:text-xl mt-2">at Dr Smile Dental Clinic</p>
+          <p className="text-3xl md:text-4xl mt-2">Confident Beautiful Smiles</p>
         </motion.header>
         <div className="grid grid-cols-1 md:grid-cols-3">
           {technologies.map((tech, index) => (
@@ -61,11 +62,13 @@ export default function Technology() {
               viewport={{ once: true }}
             >
               <figure>
-                <img
-                  src={tech.img}
-                  alt={tech.alt}
-                  className="w-full h-80 object-cover"
-                />
+            <Image
+  src={tech.img}
+  alt={tech.alt}
+  width={800}     
+  height={600}   
+  className="w-full h-80 object-cover"
+/>
                 <figcaption className="sr-only">{tech.title}</figcaption>
               </figure>
               <div className="p-4">

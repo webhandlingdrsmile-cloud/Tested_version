@@ -23,16 +23,16 @@ export default function Experience() {
 
   return (
     <section
-      className="w-full bg-black text-white py-12 sm:py-16 lg:py-20 px-7"
+      className="w-full bg-black text-white py-12 sm:py-16 lg:py-20 px-7  xl:px-15"
       aria-label="Dental Experience Section"
     >
-      <div className="container mx-auto flex flex-col lg:flex-row items-center lg:items-stretch overflow-hidden md:gap-19">
+      <div className=" mx-auto flex flex-col lg:flex-row items-center lg:items-stretch overflow-hidden md:gap-19">
         <motion.div
           initial="hidden"
           whileInView="show"
           viewport={{ once: true, amount: 0.3 }}
           variants={fadeInLeft}
-          className="relative w-full lg:w-1/2 h-[320px] sm:h-[420px] lg:h-auto flex-shrink-0"
+          className="relative w-full lg:w-1/2 xl:w-[800px] h-[320px] sm:h-[420px] lg:h-auto flex-shrink-0"
         >
           <Image
             src="/Images/E1.png"
@@ -64,15 +64,15 @@ export default function Experience() {
 
           <motion.h2
             variants={fadeInUp}
-            className="text-xl md:text-2xl md:text-4xl lg:text-xl  xl:text-[36px] font-bold leading-snug mb-4"
+            className="text-xl md:text-2xl md:text-4xl lg:text-xl  xl:text-[36px] font-extrabold leading-snug mb-4"
           >
             Your Journey to a Confident{" "}
-            <br className="hidden sm:block" /> Smile Starts Here
+            <br className="hidden sm:block" /> <span className="font-thin">Smile Starts Here</span>
           </motion.h2>
 
           <motion.p
             variants={fadeInUp}
-            className="text-gray-300 text-xs md:text-base lg:text-sm xl:text-base leading-relaxed mb-4"
+            className="text-white text-xs md:text-base lg:text-sm xl:text-base leading-relaxed mb-4"
           >
             At Dr Smile Dental Clinic, we believe every smile tells a story, and
             we are here to make yours brighter, healthier, and more confident.
@@ -83,7 +83,7 @@ export default function Experience() {
 
           <motion.p
             variants={fadeInUp}
-            className="text-gray-300 text-xs md:text-base lg:text-sm xl:text-base leading-relaxed mb-8"
+            className="text-white text-xs md:text-base lg:text-sm xl:text-base leading-relaxed mb-8"
           >
             From preventive checkups and cosmetic enhancements to orthodontics
             and restorative treatments, we ensure personalized solutions for
@@ -107,7 +107,7 @@ export default function Experience() {
                 <h3 className="font-semibold text-white text-sm md:text-base lg:text-sm xl:text-base">
                   Our Mission
                 </h3>
-                <p className="text-gray-400 text-xs sm:text-sm lg:text-xs xl:text-base leading-snug">
+                <p className="text-white text-xs sm:text-sm lg:text-xs xl:text-sm leading-snug">
                   Compassionate, precise, innovative care for healthy smiles.
                 </p>
               </div>
@@ -128,7 +128,7 @@ export default function Experience() {
                 <h3 className="font-semibold text-white text-sm sm:text-base">
                   Our Vision
                 </h3>
-                <p className="text-gray-400 text-xs sm:text-sm lg:text-xs xl:text-base leading-snug">
+                <p className="text-white text-xs sm:text-sm lg:text-xs xl:text-sm leading-snug">
                   Compassionate, precise, innovative care creating confident
                   smiles.
                 </p>
