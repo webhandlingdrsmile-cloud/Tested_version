@@ -47,12 +47,12 @@ export default function WhyPatients() {
         </p>
 
         {/* Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 group">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 ">
 
           {items.map((item, index) => (
             <div
               key={index}
-              className={`group bg-white shadow-md p-8 text-center  rounded transition-all duration-300 transform hover:-translate-y-2 hover:shadow-2xl ${item.hoverBg} hover:text-white`}
+              className={`group bg-white shadow-md p-8 text-center group  rounded transition-all duration-300 transform hover:-translate-y-2 hover:shadow-2xl ${item.hoverBg} hover:text-white`}
             >
               <div className="mb-4 flex justify-center">
              <div className="bg-gray-300/30 p-5 group-hover:bg-gray-100 ">

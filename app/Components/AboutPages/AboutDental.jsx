@@ -1,8 +1,9 @@
-// Fully Responsive AboutDental Component
+
 "use client";
 
 import Image from "next/image";
-import { Play } from "lucide-react";
+import { FaPlay } from "react-icons/fa";
+import Link from "next/link";
 
 export default function AboutDental() {
   const services = [
@@ -96,24 +97,26 @@ export default function AboutDental() {
           className="object-cover"
         />
 
-        <div className="absolute inset-0 bg-black/40"></div>
+        <div className="absolute inset-0 bg-black/10"></div>
 
         <div className="relative z-10 max-w-xl px-4 sm:px-6 text-white">
-          <button className="mb-6 bg-white/80 text-black p-3 sm:p-4 rounded-full hover:bg-white transition">
-            <Play size={28} />
+          <button className="mb-6 bg-gray-200/50 text-black p-3 sm:p-4 rounded-full  transition">
+            <FaPlay size={28} className="text-white" />
           </button>
 
-          <h2 className="text-lg sm:text-xl lg:text-2xl font-bold mb-4 leading-relaxed">
+          <h2 className="text-lg sm:text-xl lg:text-xl font-bold mb-4 leading-relaxed">
             Our Motive is Helping Patients From Around the Globe
           </h2>
 
-          <p className="mb-6 text-gray-200 text-xs sm:text-sm lg:text-base">
+          <p className="mb-6 text-gray-200 text-xs sm:text-sm lg:text-sm">
             Lorem Ipsum is simply dummy text of the printing industry. It has been the industry's standard dummy text for centuries.
           </p>
 
-          <button className="bg-[#7A3B1A] text-white px-5 sm:px-6 py-2 sm:py-3 rounded-md hover:bg-[#5C2B12] transition text-sm sm:text-base">
+     <Link href={`/Booking`}>
+          <button className="bg-[#704532] text-white px-5 sm:px-6 py-2 sm:py-3  hover:bg-[#5C2B12] transition text-sm sm:text-base">
             Schedule Now
           </button>
+     </Link>
         </div>
       </section>
     </main>
