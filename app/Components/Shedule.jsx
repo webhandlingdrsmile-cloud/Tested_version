@@ -54,7 +54,7 @@ export default function Schedule() {
         className="w-full sm:w-auto mx-auto"
       >
         <Link
-          href="#appointment"
+          href="/Booking"
           className="block bg-[#704532] hover:bg-[#422014] text-white px-6 py-3 font-medium shadow-md transition text-center w-40 mx-auto mt-5"
         >
         Shedule Now

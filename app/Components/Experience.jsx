@@ -23,16 +23,16 @@ export default function Experience() {
 
   return (
     <section
-      className="w-full bg-black text-white py-12 sm:py-16 lg:py-20 px-7  xl:px-15"
+      className="w-full bg-black text-white py-12 sm:py-16 lg:py-20 px-7"
       aria-label="Dental Experience Section"
     >
-      <div className=" mx-auto flex flex-col lg:flex-row items-center lg:items-stretch overflow-hidden md:gap-19">
+      <div className="container mx-auto flex flex-col lg:flex-row items-center lg:items-stretch overflow-hidden md:gap-19">
         <motion.div
           initial="hidden"
           whileInView="show"
           viewport={{ once: true, amount: 0.3 }}
           variants={fadeInLeft}
-          className="relative w-full lg:w-1/2 xl:w-[800px] h-[320px] sm:h-[420px] lg:h-auto flex-shrink-0"
+          className="relative w-full lg:w-1/2 h-[320px] sm:h-[420px] lg:h-auto flex-shrink-0"
         >
           <Image
             src="/Images/E1.png"
@@ -140,7 +140,7 @@ export default function Experience() {
             className="flex items-center gap-4 flex-wrap"
           >
             <Link
-              href="#about"
+              href="/About"
               className="bg-[#704532] hover:bg-[#4a2a1f] text-white px-6 py-3 text-sm sm:text-base font-medium transition"
             >
               About More

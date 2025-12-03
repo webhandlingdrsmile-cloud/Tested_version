@@ -13,25 +13,24 @@ export default function AboutStory() {
           />
         </div>
         <div className="text-center md:text-left">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[32px] font-semibold text-gray-900 mb-4">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[32px] font-bold text-[#704532] mb-4">
             Our Story
           </h2>
 
           <p className="text-xs sm:text-xs md:text-sm text-gray-700 xl:text-[17px] text-start leading-relaxed mb-4 max-w-2xl">
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s. Lorem Ipsum has been.
+        At Dr Smile, patient comfort and precision come first. Our team of highly experienced orthodontists 
+        and dental specialists 
           </p>
 
           <p className="text-xs sm:text-xs md:text-sm xl:text-[17px] text-gray-700 text-start leading-relaxed mb-6 max-w-2xl">
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s. Lorem Ipsum is simply dummy text of the
-            printing and typesetting industry. Lorem Ipsum has been the
-            industry's standard dummy text ever since the 1500s.
+          ensure every treatment is tailored to your unique needs 
+           whether you’re seeking discreet alignment options, corrective orthodontic care
+           , or complete dental makeover solutions. From 
+           digital smile assessments to painless procedures, we make every 
+           visit smooth, stress-free, and rewarding.
           </p>
 
-          <button className="bg-[#3D2A24] text-white px-6 py-3  hover:bg-[#2b1d18] transition text-sm sm:text-base md:text-lg">
+          <button className="bg-[#704532] text-white px-6 py-3  hover:bg-[#2b1d18] transition text-sm sm:text-base md:text-lg">
             Our Teams
           </button>
         </div>

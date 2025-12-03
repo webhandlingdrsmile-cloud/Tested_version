@@ -35,7 +35,7 @@ export default function Technology() {
       }}
     >
       <div className="absolute inset-0 bg-black/30" aria-hidden="true"></div>
-      <div className="relative z-10 px-6 md:px-7 xl:px-24">
+      <div className="relative z-10 px-6 md:px-7 xl:px-18">
         <motion.header
           className="text-center mb-12"
           initial={{ opacity: 0, y: 30 }}

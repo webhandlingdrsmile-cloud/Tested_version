@@ -5,7 +5,7 @@ import Image from "next/image";
 export default function ReshmaDr() {
   return (
     <section
-      className="relative flex items-center justify-center bg-cover bg-center px-6 md:px-10 lg:px-16 xl:px-20 py-16 lg:py-20 min-h-[80vh]"
+      className="relative flex items-center justify-center bg-cover bg-center px-6 md:px-10 lg:px-16 xl:px-20 py-16 lg:py-20 min-h-[50vh]"
       style={{ backgroundImage: "url('/Images/AB2.png')" }}
     >
     
@@ -16,13 +16,13 @@ export default function ReshmaDr() {
             Meet Dr. Reshma S
           </h2>
 
-          <p className="text-gray-200 text-sm md:text-sm lg:text-lg leading-relaxed mb-6">
+          <p className="text-gray-200 text-xs sm:text-xs md:text-sm xl:text-[17px] text-start leading-relaxed mb-6">
             Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
             Lorem Ipsum has been the industry's standard dummy text ever since the 1500s. 
             Lorem Ipsum has been.
           </p>
 
-          <p className="text-gray-200 text-sm md:text-sm lg:text-lg leading-relaxed mb-8">
+          <p className="text-gray-200 text-xs sm:text-xs md:text-sm xl:text-[17px] text-start leading-relaxed mb-8">
             Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
             Lorem Ipsum has been the industry's standard dummy text ever since the 1500s. 
             Lorem Ipsum is simply dummy text of the printing and typesetting industry. 

@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { Quote } from "lucide-react";
+import Image from "next/image";
 
 export default function Testimonials() {
   const testimonials = [
@@ -29,9 +29,17 @@ export default function Testimonials() {
       text: "I brought my daughter here for orthodontic treatment, and the results are fantastic. She smiles confidently now, and we couldn’t be happier.",
       name: "Meera Patel",
     },
+       {
+      text: "I brought my daughter here for orthodontic treatment, and the results are fantastic. She smiles confidently now, and we couldn’t be happier.",
+      name: "Meera Patel",
+    },
+       {
+      text: "I brought my daughter here for orthodontic treatment, and the results are fantastic. She smiles confidently now, and we couldn’t be happier.",
+      name: "Meera Patel",
+    },
   ];
 
-  const testimonialsPerPage = 3;
+  const testimonialsPerPage = 4;
   const totalPages = Math.ceil(testimonials.length / testimonialsPerPage);
 
   const [currentPage, setCurrentPage] = useState(0);
@@ -60,14 +68,14 @@ export default function Testimonials() {
           What Our <span className="text-[#3D2A24]">Clients Say</span>
         </h3>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mx-auto transition-all duration-700 ease-in-out">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mx-auto transition-all duration-700 ease-in-out">
         {currentTestimonials.map((t, index) => (
           <div
             key={index}
             className="bg-transparent p-6 rounded-lg text-left flex flex-col items-start"
           >
-            <Quote className="w-10 h-10 text-[#3D2A24] mb-4" />
-            <p className="text-gray-700 text-sm md:text-lg leading-relaxed mb-4">
+            <Image src="/Images/VTR1.png" alt="ImageVector" width={55} height={55} className="w-10 h-10 text-[#3D2A24] mb-4" />
+            <p className="text-gray-700 text-sm md:text-[15px]  leading-relaxed mb-4">
               {t.text}
             </p>
             <h4 className="font-semibold text-[#3D2A24]">{t.name}</h4>
