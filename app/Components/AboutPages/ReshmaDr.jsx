@@ -5,7 +5,7 @@ import Image from "next/image";
 export default function ReshmaDr() {
   return (
     <section
-      className="relative flex items-center justify-center bg-cover bg-center px-6 md:px-10 lg:px-16 xl:px-20 py-16 lg:py-20 min-h-[50vh]"
+      className="relative flex items-center justify-center bg-cover bg-center px-6 md:px-10 lg:px-16 xl:px-23 py-16 lg:py-20 min-h-[50vh]"
       style={{ backgroundImage: "url('/Images/AB2.png')" }}
     >
     

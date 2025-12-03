@@ -84,8 +84,8 @@ export default function DashboardPage() {
               className={clsx(
                 'flex items-center px-4 py-4 rounded-md text-sm font-medium',
                 pathname === item.href
-                  ? 'bg-[#00394f] text-white shadow'
-                  : 'text-gray-700 hover:text-white hover:bg-[#123D47]'
+                  ? 'bg-[#704532] text-white shadow'
+                  : 'text-gray-700 hover:text-white hover:bg-[#704532]'
               )}
             >
               <item.icon className="mr-3 h-4 w-4" />

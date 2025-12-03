@@ -49,13 +49,13 @@ export default function DoctorListPage() {
       <Link href={`/Dashboard`}>
         <button
          
-          className="text-[#00394f] text-xs md:text-xl font-semibold md:px-4 py-2 rounded-md  transition"
+          className="text-[#704532] text-xs md:text-xl font-semibold md:px-4 py-2 rounded-md  transition"
         >
           ← Back to Dashboard
         </button>
       </Link>
         <Link href="/Dashboard/Doctors/AddDoctor">
-          <button className="bg-[#00394f] hover:bg-[#002837] text-xs md:text-md text-white px-4 py-2 rounded-md flex items-center gap-2">
+          <button className="bg-[#704532] hover:bg-[#704532] text-xs md:text-md text-white px-4 py-2 rounded-md flex items-center gap-2">
             Add Doctor →
           </button>
         </Link>
@@ -91,7 +91,7 @@ export default function DoctorListPage() {
             key={idx}
             onClick={() => setCurrentPage(idx + 1)}
             className={`px-3 py-1 border rounded ${
-              currentPage === idx + 1 ? 'bg-[#00394f] text-white' : ''
+              currentPage === idx + 1 ? 'bg-[#704532] text-white' : ''
             }`}
           >
             {idx + 1}

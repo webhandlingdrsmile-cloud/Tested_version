@@ -66,7 +66,7 @@ export default function SignupPage() {
 
   return (
     <div className="min-h-screen flex flex-col md:flex-row">
-      <div className="bg-[#0f3a3e] w-full md:w-1/2 flex flex-col items-center justify-center p-8 text-white">
+      <div className="bg-[#704532] w-full md:w-1/2 flex flex-col items-center justify-center p-8 text-white">
         <h1 className="text-3xl font-bold mb-6">Dr.Smile</h1>
         <div className="mb-6">
           <Image
@@ -122,7 +122,7 @@ export default function SignupPage() {
             <button
               type="submit"
               disabled={loading}
-              className="w-full bg-[#00394f] text-white font-semibold py-2 rounded-md hover:bg-[#002837] transition"
+              className="w-full bg-[#704532] text-white font-semibold py-2 rounded-md hover:bg-[#002837] transition"
             >
               {loading ? 'Creating...' : 'Sign Up'}
             </button>
