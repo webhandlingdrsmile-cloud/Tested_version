@@ -24,7 +24,7 @@ export default function AboutLanding() {
           About Us
         </h2>
 
-        <p className="text-xs md:text-xs lg:text-sm text-gray-200 mb-6 leading-relaxed max-w-sm xl:max-w-lg">
+        <p className="text-[10px] md:text-xs lg:text-sm text-gray-200 mb-6 leading-relaxed max-w-sm xl:max-w-lg">
           Dr Smile Orthodontics and Multispeciality Dental Clinic is a premier
           dental care centre dedicated to delivering advanced, personalized, and
           comfortable treatments for every age group.

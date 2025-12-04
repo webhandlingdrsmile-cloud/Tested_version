@@ -2,11 +2,13 @@ import { NextResponse } from "next/server";
 import { dbConnect } from "../../../../../Lib/connection";
 import Blog from "../../../../../Modeles/Blogmodel";
 
+
 export async function GET(req, { params }) {
   await dbConnect();
 
   try {
-    const { id } = params;
+  
+    const { id } = await params;
 
     const blog = await Blog.findById(id);
 
@@ -15,8 +17,13 @@ export async function GET(req, { params }) {
     }
 
     return NextResponse.json(blog, { status: 200 });
+
   } catch (error) {
-    return NextResponse.json({ message: "Error fetching blog", error }, { status: 500 });
+    console.error("Error fetching blog:", error);
+    return NextResponse.json(
+      { message: "Error fetching blog", error },
+      { status: 500 }
+    );
   }
 }
 

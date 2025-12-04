@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import axios from "axios";
+import Link from "next/link";
 import { MdAccessTime } from "react-icons/md";
 
 export default function GetBlog() {
@@ -33,6 +34,11 @@ export default function GetBlog() {
         {/* GRID */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4  gap-8">
           {currentBlogs.map((blog, index) => (
+              <Link 
+              href={`/Blogs/Deatiledblog/${blog._id}`} 
+              key={index}
+              className="cursor-pointer"
+            >
             <div>
                 <div
               key={index}
@@ -88,7 +94,7 @@ export default function GetBlog() {
             </div>
             
             
-          ))}
+         </Link> ))}
         </div>
 
         {/* PAGINATION */}
