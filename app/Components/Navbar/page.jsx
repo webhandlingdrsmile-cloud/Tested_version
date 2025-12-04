@@ -204,16 +204,16 @@ export default function Navbar() {
                 )}
               </AnimatePresence>
 
-              <Link href="/teams" onClick={() => setMenuOpen(false)}>
+              <Link href="/Teams" onClick={() => setMenuOpen(false)}>
                 Our Teams
               </Link>
-              <Link href="/gallery" onClick={() => setMenuOpen(false)}>
+              <Link href="/Gallery" onClick={() => setMenuOpen(false)}>
                 Gallery
               </Link>
-              <Link href="/blogs" onClick={() => setMenuOpen(false)}>
+              <Link href="/Blogs" onClick={() => setMenuOpen(false)}>
                 Blogs
               </Link>
-              <Link href="/contact" onClick={() => setMenuOpen(false)}>
+              <Link href="/Contact" onClick={() => setMenuOpen(false)}>
                 Contact
               </Link>
             </nav>
