@@ -31,7 +31,7 @@ export async function PUT(req, { params }) {
   await dbConnect();
 
   try {
-    const { id } = params;
+    const { id } = await params;
     const body = await req.json();
 
     const updated = await Blog.findByIdAndUpdate(id, body, { new: true });
@@ -50,7 +50,7 @@ export async function DELETE(req, { params }) {
   await dbConnect();
 
   try {
-    const { id } = params;
+    const { id } = await params;
 
     const deleted = await Blog.findByIdAndDelete(id);
 

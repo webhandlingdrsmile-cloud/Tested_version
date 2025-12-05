@@ -88,7 +88,7 @@ export default function SingleBlog() {
               </h2>
 
               <p className="text-[#4b3e39] leading-relaxed text-sm">
-                {section.paragraph}
+                {section.body}
               </p>
             </div>
           ))}
@@ -96,8 +96,8 @@ export default function SingleBlog() {
 
         {/* HIGHLIGHTED QUOTE */}
         {blog.highlightedQuote && (
-          <div className="bg-[#f4e5d8] p-6 rounded-2xl mt-12 shadow-sm border border-[#e1caba]">
-            <p className="text-lg font-semibold text-[#3A2A25]">
+          <div className=" mt-12 ">
+            <p className="text-sm font-semibold text-[#3A2A25]">
               {blog.highlightedQuote.quote}
             </p>
 
