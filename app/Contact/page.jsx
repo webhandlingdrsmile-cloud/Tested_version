@@ -5,6 +5,7 @@ import axios from "axios";
 import Head from "next/head";
 import { MapPin, Phone, Mail, Clock } from "lucide-react";
 import FounderSection from "../Components/ContactPages/Founder";
+import Form from "../Components/ContactPages/Form";
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -94,6 +95,7 @@ export default function ContactPage() {
   </div>
 </div>
  <FounderSection/>
+ <Form/>
         <div className="py-12 sm:py-16 px-4 sm:px-6 xl:px-5 container mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             <div className="space-y-8">
