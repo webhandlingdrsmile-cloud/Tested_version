@@ -71,11 +71,11 @@ export default function Form() {
                   <div className="bg-[#704532] p-3 sm:p-4 rounded-full shrink-0">
                     <FaMapMarkerAlt className="text-white text-lg sm:text-xl" />
                   </div>
-                  <div>
-                    <p className="font-bold text-black text-sm sm:text-base">Location</p>
+                  <div className="max-w-sm xl:max-w-xl">
+                    <p className="font-bold text-black  text-sm sm:text-base">Location</p>
                     <p className="text-gray-800 text-sm sm:text-[15px] max-w-sm">
-                      Lorem Ipsum Is Simply Dummy Text Of The Printing And
-                      Typesetting Industry.
+                    mangalassery tower, Eloor Rd, opposite ganapathy temple, 
+                    Kalamassery, Kochi, Kerala 683104
                     </p>
                   </div>
                 </div>
@@ -83,8 +83,8 @@ export default function Form() {
             </div>
 
             {/* RIGHT SIDE FORM */}
-            <div className="order-1 lg:order-2 relative lg:absolute lg:right-2 xl:right-16 2xl:right-20">
-              <div className="bg-white rounded-2xl lg:rounded-3xl shadow-xl p-6 sm:p-8 md:p-10 w-full max-w-lg mx-auto lg:mx-0">
+            <div className="order-1 lg:order-2 relative lg:absolute lg:right-0 xl:right-16 2xl:right-20">
+              <div className="bg-white rounded-xl shadow-xl p-6 sm:p-8 md:p-10 w-full max-w-lg mx-auto lg:mx-0">
                 <h2 className="text-xl sm:text-2xl font-bold text-black">Fill The Form Below</h2>
                 <div className="w-16 h-[3px] bg-[#704532] mt-2 mb-6 rounded-full"></div>
 
@@ -266,7 +266,7 @@ export default function Form() {
 const faqs = [
   {
     q: "What is Dr. Smile and what services do you offer?",
-    a: "Lorem Ipsum Is Simply Dummy Text Of The Printing And Typesetting Industry. Lorem Ipsum Has Been The Industry's Standard Dummy Text Ever Since The 1500s.",
+    a: "Lorem Ipsum Is Simply Dummy Text Of The Printing And Typesetting Industry. Lorem Ipsum Has Been The Industry's Standard Dummy Text Ever Since The 1500s s Simply Dummy Text Of The Printing And Typesetting Industry. Lo.",
   },
   { 
     q: "How do Dr. Smile clear aligners work?",
@@ -282,6 +282,6 @@ const faqs = [
   },
   { 
     q: "How much does Dr. Smile treatment cost?",
-    a: "Lorem Ipsum Is Simply Dummy Text Of The Printing And Typesetting Industry. Lorem Ipsum Has Been The Industry's Standard Dummy Text Ever Since The 1500s.", 
+    a: "Lorem Ipsum Is Simply Dummy Text Of The Printing And Typesetting Industry. Lorem Ipsum Has Been The Industry's Standard Dummy Text Ever Since The 1500s s Simply Dummy Text Of The Printing And Typesetting Industry. Lo  .", 
   },
 ];
