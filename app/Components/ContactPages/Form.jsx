@@ -83,7 +83,7 @@ export default function Form() {
             </div>
 
             {/* RIGHT SIDE FORM */}
-            <div className="order-1 lg:order-2 relative lg:absolute lg:right-0 xl:right-16 2xl:right-20">
+            <div className="order-2 lg:order-2 relative lg:absolute lg:right-0 xl:right-16 2xl:right-20">
               <div className="bg-white rounded-xl shadow-xl p-6 sm:p-8 md:p-10 w-full max-w-lg mx-auto lg:mx-0">
                 <h2 className="text-xl sm:text-2xl font-bold text-black">Fill The Form Below</h2>
                 <div className="w-16 h-[3px] bg-[#704532] mt-2 mb-6 rounded-full"></div>

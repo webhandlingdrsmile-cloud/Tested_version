@@ -6,6 +6,7 @@ import Head from "next/head";
 import { MapPin, Phone, Mail, Clock } from "lucide-react";
 import FounderSection from "../Components/ContactPages/Founder";
 import Form from "../Components/ContactPages/Form";
+import Map from "../Components/ContactPages/Map";
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -96,6 +97,7 @@ export default function ContactPage() {
 </div>
  <FounderSection/>
  <Form/>
+ <Map/>
 
       </div>
     </>

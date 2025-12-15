@@ -5,8 +5,8 @@ import Link from "next/link";
 
 export default function FounderSection() {
   return (
-    <section className=" py-12 px-6 md:px-16">
-      <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+    <section className=" py-12 px-6 md:px-7 lg:px-7 xl:px-18">
+      <div className=" mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
         <div className="w-full">
           <Image
             src="/Images/F1.png"
