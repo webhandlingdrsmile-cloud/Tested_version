@@ -238,7 +238,7 @@ export default function Form() {
                   <div key={index} className="mb-4">
                     <button
                       onClick={() => toggleFAQ(index)}
-                      className="w-full bg-[#704532] text-white px-4 sm:px-5 md:px-6 py-4 sm:py-5 rounded-md flex justify-between items-center text-left hover:bg-[#5b3427] transition-colors"
+                      className="w-full bg-[#704532] text-white px-4 sm:px-5 md:px-6 py-4 sm:py-7 rounded-md flex justify-between items-center text-left hover:bg-[#5b3427] transition-colors"
                     >
                       <p className="text-sm font-semibold pr-4 flex-1">{item.q}</p>
                       <ChevronDown
