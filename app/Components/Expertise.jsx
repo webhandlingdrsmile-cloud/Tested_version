@@ -61,8 +61,6 @@ export default function Expertise() {
             </article>
           </div>
         </div>
-
-        {/* Image Section */}
   <div className="relative h-[300px] sm:h-[350px] md:h-[400px] lg:h-full min-h-[300px] w-full">
   <Image
     src="/Images/E2-1.png"

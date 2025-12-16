@@ -3,6 +3,7 @@
 import { PhoneCall, Smile, UserCheck } from "lucide-react";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function WhyChooseUs() {
   const features = [
@@ -38,29 +39,35 @@ export default function WhyChooseUs() {
 
   return (
 <section
-  className="bg-[url('/Images/BGw.png')] bg-cover bg-center text-white px-6 sm:px-10 lg:px-18 overflow-hidden pt-16 pb-8 xl:pb-0"
+  className="bg-[url('/Images/BGw.png')] bg-cover bg-center text-white px-6 sm:px-10 md:px-7 lg:px-8 xl:px-15 overflow-hidden pt-16 pb-8 xl:pb-0"
 >
 
-      <div className=" mx-auto grid grid-cols-1 xl:grid-cols-3 gap-x-12 items-center">
-        {/* Text Section */}
+      <div className=" mx-auto grid grid-cols-1 xl:grid-cols-3 gap-x-12 gap-y-10 md:gap-y-1 items-center">
+
         <div>
-          <h4 className="uppercase text-sm font-semibold tracking-wider text-gray-300">
+          <h4 className="uppercase text-sm font-semibold tracking-wider text-white">
             Why Choose Us
           </h4>
           <h2
             id="why-choose-us-heading"
             className="text-2xl sm:text-3xl lg:text-4xl font-bold mt-3 leading-snug"
           >
-            Expert care creating beautiful, healthy, confident smiles.
+           Crafting Confident Smiles with <span className="font-light">Expert Dental Care</span>
           </h2>
-          <p className="text-gray-300 mt-4 text-sm sm:text-base leading-relaxed max-w-lg">
+          <p className="text-white mt-4 text-sm sm:text-[15px] leading-relaxed max-w-lg">
             At Dr Smile, we provide expert dental care combining advanced
             technology and personalized attention, ensuring every patient enjoys
             healthy, beautiful, and confident smiles with lasting results.
           </p>
+             <Link
+              href="/Contact"
+             
+            >
+            <button  className="bg-white text-[#704532] mt-4 px-6 py-3 text-sm sm:text-base font-medium font-semibold transition">
+              Contact Us
+            </button>
+            </Link>
         </div>
-
-        {/* Image Section */}
         <div className="flex justify-center">
           <div className="relative w-[260px] sm:w-[320px] lg:w-[300px] xl:w-[360px] aspect-[3/4]">
             <Image
