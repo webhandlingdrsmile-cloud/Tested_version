@@ -5,12 +5,12 @@ import Image from "next/image";
 export default function ReshmaDr() {
   return (
     <section
-      className="relative flex items-center justify-center bg-cover bg-center px-6 md:px-10 lg:px-16 xl:px-23 py-16 lg:py-20 min-h-[50vh]"
+      className="relative flex items-center justify-center bg-cover bg-center px-6 md:px-10 lg:px-16 xl:px-29 py-10 lg:py-20 min-h-[50vh]"
       style={{ backgroundImage: "url('/Images/AB2.png')" }}
     >
     
       <div className="absolute inset-0 bg-black/40"></div>
-      <div className="relative z-10 flex flex-col-reverse md:flex-row items-center justify-between gap-10 w-full container mx-auto">
+      <div className="relative z-10 flex flex-col-reverse md:flex-row items-center justify-between gap-3 w-full  mx-auto">
         <div className="flex-1 md:flex-[0.6] text-white text-center md:text-left">
           <h2 className="text-3xl md:text-2xl lg:text-5xl font-bold mb-4 leading-snug">
             Meet Dr. Reshma S
