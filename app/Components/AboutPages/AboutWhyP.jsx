@@ -35,8 +35,8 @@ export default function WhyPatients() {
   ];
 
   return (
-    <section className="bg-[#E1D5C9] py-16 px-6">
-      <div className="container mx-auto text-center">
+    <section className="bg-[#E1D5C9] py-16 px-6 md:px-10 lg:px-16 xl:px-30">
+      <div className=" mx-auto text-center">
 
         <h2 className="text-2xl md:text-3xl font-semibold mb-2">
           Why <span className="font-bold text-black">Patients</span> Trust Us
@@ -47,7 +47,7 @@ export default function WhyPatients() {
         </p>
 
         {/* Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 ">
+        <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6 ">
 
           {items.map((item, index) => (
             <div

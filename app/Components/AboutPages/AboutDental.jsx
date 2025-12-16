@@ -80,7 +80,7 @@ export default function AboutDental() {
             <h3 className="text-lg sm:text-xl lg:text-2xl font-semibold mb-2">{item.title}</h3>
             <p className="mb-4 text-sm sm:text-base opacity-90 max-w-md">{item.desc}</p>
 
-            <button className={`${item.btnBg} ${item.btnText} px-4 py-2 text-xs sm:text-sm w-fit rounded-md`}>
+            <button className={`${item.btnBg} ${item.btnText} px-4 py-2 text-xs sm:text-sm w-fit `}>
               Learn More
             </button>
           </div>
