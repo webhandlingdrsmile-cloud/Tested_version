@@ -70,7 +70,7 @@ export default function Landing() {
         <link rel="canonical" href="https://www.drsmile.com/" />
       </Head>
 
-      <header className="relative w-full h-screen xl:h-[85vh] flex items-center justify-center sm:justify-start overflow-hidden" role="banner">
+      <header className="relative w-full h-screen xl:h-screen flex items-center justify-center sm:justify-start overflow-hidden" role="banner">
         <video autoPlay loop muted playsInline aria-hidden="true" className="absolute top-0 left-0 w-full h-full object-cover">
           <source src="./Video/dp.mp4" type="video/mp4" />
         </video>

@@ -6,7 +6,7 @@ export default function Expertise() {
   return (
     <section className="w-full overflow-hidden">
       <div className="grid grid-cols-1 lg:grid-cols-2 min-h-[400px] lg:min-h-[500px]">
-        <div className="bg-[#f5e9dd] p-6 sm:p-8 md:p-10 lg:p-12 xl:p-16 flex flex-col justify-center h-full">
+        <div className="bg-[#f5e9dd] p-6 sm:p-8 md:px-6 md:py-6  lg:px-7 lg:py-12 xl:p-16 flex flex-col justify-center h-full">
           <header className="mb-4 sm:mb-6 md:mb-8">
             <h4 className="uppercase text-sm font-extrabold tracking-wider text-[#704532] mb-2">
               Expertise
@@ -45,7 +45,7 @@ export default function Expertise() {
             
             <article className="flex items-start gap-3">
               <FaCheckSquare
-                className="text-[#2B74FF] w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 flex-shrink-0 mt-1"
+                className="text-[#2B74FF] w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 xl:w-7 xl:h-7 flex-shrink-0 mt-1"
                 aria-hidden="true"
               />
               <div className="flex-1">
