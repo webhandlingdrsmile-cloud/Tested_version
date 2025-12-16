@@ -70,7 +70,7 @@ export default function AboutDental() {
         {services.map((item, index) => (
           <div
             key={index}
-            className={`${item.textColor} bg-cover bg-center p-8 sm:p-10 lg:p-14 xl:px-45 flex flex-col justify-center min-h-[280px]`}
+            className={`${item.textColor} bg-cover bg-center p-8 sm:p-10 lg:p-14 xl:px-28 flex flex-col justify-center min-h-[280px]`}
             style={{ backgroundImage: `url('${item.bg}')` }}
           >
             <div className="mb-4">
