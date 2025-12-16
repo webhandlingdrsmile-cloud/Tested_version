@@ -7,9 +7,7 @@ export default function Logo() {
   return (
     <section className="relative w-full overflow-hidden">
       <div className="relative w-full">
-        {/* Desktop - Tablet */}
         <div className="hidden sm:grid sm:grid-cols-3 w-full min-h-[400px] md:min-h-[500px] lg:min-h-[600px] xl:min-h-[700px]">
-          {/* Logo */}
           <div className="bg-[#3D2A24] flex items-center justify-center p-4 sm:p-6 md:p-8 h-full relative">
             <div className="relative w-full h-full max-w-[90%] max-h-[80%]">
               <Image
@@ -22,20 +20,19 @@ export default function Logo() {
               />
             </div>
           </div>
-
-          {/* Doctor Image */}
-          <div className="bg-gray-100 h-full relative overflow-hidden">
-            <Image
-              src="/Images/L1.png"
-              alt="Doctor"
-              fill
-              className="object-cover object-center"
-              sizes="(max-width: 768px) 33vw, (max-width: 1024px) 25vw, 20vw"
-              priority
-            />
-          </div>
-
-          {/* Content - LEFT ALIGNED like screenshot */}
+<div className="bg-gray-100 h-full relative overflow-hidden">
+  <Image
+    src="/Images/L1.png"
+    alt="Doctor"
+    fill
+    className="object-cover object-center"
+    sizes="(max-width: 768px) 100vw,
+           (max-width: 1024px) 50vw,
+           33vw"
+    quality={100}
+    priority
+  />
+</div>
           <div className="flex flex-col justify-center items-start p-4 sm:p-6 md:p-8 lg:p-10 xl:p-12 bg-white h-full">
             <div className="flex flex-col items-start text-left gap-3 sm:gap-4 md:gap-5 lg:gap-6 w-full max-w-lg">
               <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-gray-900 leading-snug sm:leading-tight md:leading-tight">
@@ -59,10 +56,7 @@ export default function Logo() {
             </div>
           </div>
         </div>
-
-        {/* Mobile */}
         <div className="sm:hidden flex flex-col w-full">
-          {/* Logo */}
           <div className="bg-[#3D2A24] flex items-center justify-center p-6 aspect-square relative">
             <div className="relative w-full h-full max-w-[80%] max-h-[80%]">
               <Image
@@ -75,8 +69,6 @@ export default function Logo() {
               />
             </div>
           </div>
-
-          {/* Doctor Image */}
           <div className="bg-gray-100 aspect-[4/3] relative">
             <Image
               src="/Images/L1.png"
@@ -87,8 +79,6 @@ export default function Logo() {
               priority
             />
           </div>
-
-          {/* Content - LEFT ALIGNED */}
           <div className="flex flex-col justify-center items-start p-6 bg-white min-h-[300px]">
             <div className="flex flex-col items-start text-left gap-4 w-full">
               <h1 className="text-2xl font-bold text-gray-900 leading-tight">
