@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function BlogLanding() {
   return (
-    <section className="relative w-full h-[25vh] md:h-[30vh] xl:h-[50vh] flex items-center">
+    <section className="relative w-full h-[50vh] md:h-[40vh] xl:h-[60vh] flex items-center">
       <img
         src="./Images/AB1.png"
         alt="About Us"
