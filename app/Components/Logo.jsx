@@ -11,7 +11,7 @@ export default function Logo() {
           <div className="bg-[#3D2A24] flex items-center justify-center p-4 sm:p-6 md:p-8 h-full relative">
             <div className="relative w-full h-full max-w-[90%] max-h-[80%]">
               <Image
-                src="/Images/logo.png"
+                src="/Images/Logo.png"
                 alt="Dr Smile Logo"
                 fill
                 className="object-contain"

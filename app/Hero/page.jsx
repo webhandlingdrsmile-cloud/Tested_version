@@ -6,6 +6,7 @@ import Footer from "../Components/Footer/page"
 import Gallery from "../Components/Gallary"
 import Landing from "../Components/Landing"
 import Logo from "../Components/Logo"
+import Mapss from "../Components/Map"
 import Section2 from "../Components/Section2"
 import Shedule from "../Components/Shedule"
 import Technology from "../Components/Technology"
@@ -24,6 +25,7 @@ export default function Hero(){
             <Gallery/>
             <Shedule/>
             <Logo/>
+            <Mapss/>
             <Testimonials/>
         
         </div>

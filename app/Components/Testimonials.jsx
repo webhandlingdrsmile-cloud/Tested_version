@@ -61,7 +61,7 @@ export default function Testimonials() {
   return (
     <section className="bg-[#E1D5C9] py-16 px-6 md:px-12 text-center">
       <div className="mb-12">
-        <h2 className="text-sm uppercase tracking-wide text-gray-600 mb-2">
+        <h2 className="text-sm uppercase tracking-wide text-[#704532] font-bold mb-2">
           Testimonials
         </h2>
         <h3 className="text-2xl md:text-3xl font-semibold text-gray-900">

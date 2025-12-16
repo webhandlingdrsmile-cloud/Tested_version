@@ -14,7 +14,7 @@ export default function Gallery() {
 
   return (
     <div className="min-h-full bg-[#E1D5C9] relative px-6 sm:px-8 md:px-8 lg:px-10 xl:px-15 py-8 sm:py-10 lg:py-12">
-     <div className="relative grid grid-cols-1 lg:grid-cols-2  lg:gap-10 items-center py-6 sm:py-8 lg:py-10">
+     <div className="relative grid grid-cols-1 md:grid-cols-2  lg:gap-10 items-center py-6 sm:py-8 lg:py-10">
 
   <div className="space-y-4 sm:space-y-5">
     <p className="font-extrabold text-sm sm:text-base text-[#704532] uppercase tracking-wide">
