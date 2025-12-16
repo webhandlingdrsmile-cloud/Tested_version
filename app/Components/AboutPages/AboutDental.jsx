@@ -48,20 +48,20 @@ export default function AboutDental() {
   return (
     <main className="bg-transparent w-full">
       {/* Stats Section */}
-      <section className="mx-auto py-10 md:py-16 lg:py-20 px-4 sm:px-6 grid grid-cols-1 sm:grid-cols-3 text-center gap-8 max-w-6xl">
+      <section className="mx-auto py-10 md:py-16 lg:py-20 px-4 sm:px-6 grid grid-cols-3 sm:grid-cols-3 text-center gap-8 max-w-6xl">
         <div>
-          <h2 className="text-2xl sm:text-3xl lg:text-5xl text-[#704532] font-extrabold">10+ Years</h2>
-          <p className="text-[#704532] font-semibold text-sm sm:text-base">Dental Excellence</p>
+          <h2 className="text-xl sm:text-3xl lg:text-5xl text-[#704532] font-extrabold">10+ Years</h2>
+          <p className="text-[#704532] font-semibold text-[10px] sm:text-base">Dental Excellence</p>
         </div>
 
         <div>
-          <h2 className="text-2xl sm:text-3xl lg:text-5xl text-[#704532] font-extrabold">3,500+</h2>
-          <p className="text-[#704532] font-semibold text-sm sm:text-base">Happy Patients</p>
+          <h2 className="text-xl sm:text-3xl lg:text-5xl text-[#704532] font-extrabold">3,500+</h2>
+          <p className="text-[#704532] font-semibold text-[10px] sm:text-base">Happy Patients</p>
         </div>
 
         <div>
-          <h2 className="text-2xl sm:text-3xl lg:text-5xl text-[#704532] font-extrabold">99%</h2>
-          <p className="text-[#704532] font-semibold text-sm sm:text-base">Satisfaction Rate</p>
+          <h2 className="text-xl sm:text-3xl lg:text-5xl text-[#704532] font-extrabold">99%</h2>
+          <p className="text-[#704532] font-semibold text-[10px] sm:text-base">Satisfaction Rate</p>
         </div>
       </section>
 
