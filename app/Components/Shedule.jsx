@@ -9,7 +9,7 @@ export default function Schedule() {
       <div
         className="absolute inset-0 bg-cover bg-center"
         style={{
-          backgroundImage: "url('./Images/S1.png')",
+          backgroundImage: "url('./Images/E2-1.jpg')",
         }}
       />
       <div className="absolute inset-0 bg-black/20" /> 

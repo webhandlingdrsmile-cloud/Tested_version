@@ -6,19 +6,19 @@ import Image from "next/image";
 export default function Technology() {
   const technologies = [
     {
-      img: "/Images/T2.png",
+      img: "/Images/T4.jpg",
       title: "Single – Visit Dentistry",
       desc: "Advanced Single-Visit Dentistry: Quick, Comfortable, Lasting Smiles.",
       alt: "Dentist consulting a patient for single-visit dental treatment"
     },
     {
-      img: "/Images/T3.png",
+      img: "/Images/T3.jpg",
       title: "Robot – Guided Implant Placement",
       desc: "Precision, Safety, Comfort—Robot-Guided Implants Ensure Perfect Smiles.",
       alt: "Dental implant placement using advanced robot-guided technology"
     },
     {
-      img: "/Images/T4.png",
+      img: "/Images/T2.jpg",
       title: "No – Shot Laser Fillings",
       desc: "Painless, Precise Laser Fillings For Healthier, Stress-Free Smiles.",
       alt: "Patient receiving painless no-shot laser dental fillings"

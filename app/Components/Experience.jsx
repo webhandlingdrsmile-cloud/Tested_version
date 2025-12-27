@@ -35,7 +35,7 @@ export default function Experience() {
           className="relative w-full lg:w-1/2 h-[420px] sm:h-[620px] lg:h-auto flex-shrink-0"
         >
           <Image
-            src="/Images/E1.png"
+            src="/Images/E1.jpg"
             alt="Dr Reshma S - Orthodontist"
             fill
             className="object-cover object-top"

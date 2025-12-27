@@ -63,7 +63,7 @@ export default function Expertise() {
         </div>
   <div className="relative h-[300px] sm:h-[350px] md:h-[400px] lg:h-full min-h-[300px] w-full">
   <Image
-    src="/Images/E2-1.png"
+    src="/Images/E2-1.jpg"
     alt="Expertise section image"
     fill
     className="object-cover"
